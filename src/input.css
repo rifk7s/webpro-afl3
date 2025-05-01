@@ -28,3 +28,24 @@
     animation: pulse-handshake 1.2s infinite;
   }
 
+/* Transisi dan Overlay Sidebar (untuk sekarang masi di home.html) */
+.sidebar-fade {
+  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0;
+  transform: translateX(-30px);
+  pointer-events: none;
+}
+.sidebar-fade.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+.sidebar-overlay {
+  transition: background 0.3s;
+  background: rgba(0,0,0,0.15);
+}
+.sidebar-overlay.hidden {
+  background: transparent;
+  pointer-events: none;
+}
+
