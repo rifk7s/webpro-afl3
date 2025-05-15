@@ -1143,9 +1143,16 @@
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
 }
+@media (min-width: 768px) {
+  .sidebar-fade.sidebar-desktop-active {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    pointer-events: auto !important;
+  }
+}
 .sidebar-overlay {
   transition: background 0.3s ease;
-  background: rgba(0,0,0,0.15);
+  background: rgba(0, 0, 0, 0.15);
   will-change: background, opacity;
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
