@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects - Rifky Portfolio</title>
-  <link href="src/output.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link href="src/output.css" rel="stylesheet">
 </head>
 
 <body class="bg-gray-50 min-h-screen">
@@ -28,10 +29,10 @@
     </div>
   </header>
 
-  <div class="flex min-h-screen">    <!-- Sidebar Overlay (Mobile) -->    <div id="sidebarOverlay" class="fixed inset-0 z-20 sidebar-overlay hidden md:hidden"></div>    <!-- Sidebar -->
+    <div class="flex min-h-screen">
+    <!-- Sidebar Overlay (Mobile) -->    <div id="sidebarOverlay" class="fixed inset-0 z-20 sidebar-overlay hidden md:hidden"></div>    <!-- Sidebar: Dekstop Selalu Visible, Mobile ya Hamburger Menu -->
     <aside id="sidebar" class="sidebar-fade fixed z-40 top-0 left-0 h-full w-72 bg-white shadow-lg flex flex-col items-center py-8 px-6 min-h-screen border-r border-gray-200
-      md:w-72 md:translate-x-0 md:opacity-100 md:pointer-events-auto active">
-        <!-- Close Button (only visible on mobile) -->
+      md:w-72 md:translate-x-0 md:opacity-100 md:pointer-events-auto active"><!-- Close Button (only visible on mobile) -->
       <button id="closeSidebar" class="absolute top-4 right-4 p-2 text-gray-500 hover:text-gray-700 md:hidden">
         <i class="fa-solid fa-xmark text-xl"></i>
       </button>
@@ -77,9 +78,8 @@
 
         <!-- Grid Layout for Projects -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          
           <!-- Project 1: webpro-afl3 (Featured) -->
-          <a href="projects/webpro-afl3.html" class="group">
+          <a href="projects/webpro-afl/webpro-afl3.html" class="group">
             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 relative h-full">
               <div class="absolute top-2 right-2 z-10">
                 <span class="px-2 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-md">Featured</span>
@@ -88,9 +88,10 @@
                 <h3 class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">webpro-afl3</h3>
                 <p class="text-gray-600 text-sm mb-4">My portfolio website built with TailwindCSS, featuring responsive design and clean UI.</p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full text-xs font-medium">HTML</span>
-                  <span class="bg-green-100 text-green-700 px-2 py-0.5 rounded-full text-xs font-medium">CSS</span>
-                  <span class="bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full text-xs font-medium">JavaScript</span>
+                  <i class="devicon-html5-plain text-2xl text-orange-500" title="HTML5"></i>
+                  <i class="devicon-css3-plain text-2xl text-blue-500" title="CSS3"></i>
+                  <i class="devicon-javascript-plain text-2xl text-yellow-400" title="JavaScript"></i>
+                  <i class="devicon-tailwindcss-plain text-2xl text-cyan-500" title="TailwindCSS"></i>
                 </div>
                 <span class="text-blue-600 font-medium text-sm flex items-center gap-1">
                   View Project <i class="fa-solid fa-arrow-right ml-1 group-hover:translate-x-1 transition-transform"></i>
@@ -98,15 +99,14 @@
               </div>
             </div>
           </a>
-          
           <!-- Project 2: SwingGUI -->
-          <a href="projects/SwingGUI.html" class="group">
+          <a href="projects/SwingGui/SwingGUI.html" class="group">
             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 relative h-full">
               <div class="p-6 relative">
                 <h3 class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">SwingGUI</h3>
                 <p class="text-gray-600 text-sm mb-4">Java OOP application with Swing-based graphical user interface.</p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="bg-red-100 text-red-700 px-2 py-0.5 rounded-full text-xs font-medium">Java</span>
+                  <i class="devicon-java-plain text-2xl text-red-700" title="Java"></i>
                 </div>
                 <span class="text-blue-600 font-medium text-sm flex items-center gap-1">
                   View Project <i class="fa-solid fa-arrow-right ml-1 group-hover:translate-x-1 transition-transform"></i>
@@ -114,7 +114,6 @@
               </div>
             </div>
           </a>
-          
           <!-- Project 3: python_snakegame (Featured) -->
           <a href="https://github.com/rifk7s/python_snakegame" target="_blank" class="group">
             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 relative h-full">
@@ -125,7 +124,7 @@
                 <h3 class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">python_snakegame</h3>
                 <p class="text-gray-600 text-sm mb-4">Simple python snake game built with pygame modules.</p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full text-xs font-medium">Python</span>
+                  <i class="devicon-python-plain text-2xl text-yellow-700" title="Python"></i>
                 </div>
                 <span class="text-blue-600 font-medium text-sm flex items-center gap-1">
                   View on GitHub <i class="fa-brands fa-github ml-1"></i>
@@ -133,49 +132,15 @@
               </div>
             </div>
           </a>
-          
-          <!-- Project 4: webpro-afl -->
-          <a href="https://github.com/rifk7s/webpro-afl" target="_blank" class="group">
-            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 relative h-full">
-              <div class="p-6 relative">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">webpro-afl</h3>
-                <p class="text-gray-600 text-sm mb-4">Implementation of Figma design to website using Bootstrap Framework.</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full text-xs font-medium">Bootstrap</span>
-                  <span class="bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full text-xs font-medium">HTML</span>
-                </div>
-                <span class="text-blue-600 font-medium text-sm flex items-center gap-1">
-                  View on GitHub <i class="fa-brands fa-github ml-1"></i>
-                </span>
-              </div>
-            </div>
-          </a>
-          
-          <!-- Project 5: rifk7s -->
-          <a href="https://github.com/rifk7s/rifk7s" target="_blank" class="group">
-            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 relative h-full">
-              <div class="p-6 relative">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">rifk7s</h3>
-                <p class="text-gray-600 text-sm mb-4">Config files for my GitHub profile.</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="bg-gray-100 text-gray-700 px-2 py-0.5 rounded-full text-xs font-medium">Config</span>
-                </div>
-                <span class="text-blue-600 font-medium text-sm flex items-center gap-1">
-                  View on GitHub <i class="fa-brands fa-github ml-1"></i>
-                </span>
-              </div>
-            </div>
-          </a>
-          
-          <!-- Project 6: Bootstrap_Praktikum -->
+          <!-- Project 4: Bootstrap_Praktikum -->
           <a href="https://github.com/rifk7s/Bootstrap_Praktikum" target="_blank" class="group">
             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 relative h-full">
               <div class="p-6 relative">
                 <h3 class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">Bootstrap_Praktikum</h3>
                 <p class="text-gray-600 text-sm mb-4">Bootstrap practice project with live preview.</p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full text-xs font-medium">Bootstrap</span>
-                  <span class="bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full text-xs font-medium">HTML</span>
+                  <i class="devicon-bootstrap-plain text-2xl text-purple-700" title="Bootstrap"></i>
+                  <i class="devicon-html5-plain text-2xl text-blue-700" title="HTML5"></i>
                 </div>
                 <span class="text-blue-600 font-medium text-sm flex items-center gap-1">
                   View on GitHub <i class="fa-brands fa-github ml-1"></i>
@@ -184,52 +149,11 @@
             </div>
           </a>
         </div>
-        
         <p class="text-center text-gray-500 text-sm mt-8 mb-4">You can find more on my <a href="https://github.com/rifk7s?tab=repositories" target="_blank" class="text-blue-600 hover:text-blue-800">GitHub profile</a>.</p>
       </div>
     </main>
   </div>
 
-  <!-- JAVASCRIPTS AAAAAAAAAAAAAAAA -->
-  <script>
-    // Hamburger menu logic
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const sidebar = document.getElementById('sidebar');
-    const sidebarOverlay = document.getElementById('sidebarOverlay');
-    const closeSidebar = document.getElementById('closeSidebar');
-    const mobileHeader = document.getElementById('mobileHeader');
-
-    function openSidebar() {
-      sidebar.classList.add('active');
-      sidebarOverlay.classList.remove('hidden');
-      if (mobileHeader) mobileHeader.style.display = 'none';
-      setTimeout(() => sidebarOverlay.classList.add('sidebar-overlay'), 10);
-    }
-    function closeSidebarFn() {
-      sidebar.classList.remove('active');
-      sidebarOverlay.classList.add('hidden');
-      sidebarOverlay.classList.remove('sidebar-overlay');
-      if (mobileHeader) mobileHeader.style.display = '';
-    }
-
-    hamburgerBtn.addEventListener('click', openSidebar);
-    sidebarOverlay.addEventListener('click', closeSidebarFn);
-    if (closeSidebar) closeSidebar.addEventListener('click', closeSidebarFn);
-
-    // Responsive: menampilkan sidebar secara default pada md+
-    function handleResize() {
-      if (window.innerWidth >= 768) {
-        sidebar.classList.add('active');
-        sidebarOverlay.classList.add('hidden');
-        if (mobileHeader) mobileHeader.style.display = 'none';
-      } else {
-        sidebar.classList.remove('active');
-        sidebarOverlay.classList.add('hidden');
-        if (mobileHeader) mobileHeader.style.display = '';
-      }
-    }
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('DOMContentLoaded', handleResize);
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
