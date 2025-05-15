@@ -115,45 +115,6 @@
   </div>
 
   <!-- JAVASCRIPTS AAAAAAAAAAAAAAAA -->
-  <script>
-    // Hamburger menu logic
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const sidebar = document.getElementById('sidebar');
-    const sidebarOverlay = document.getElementById('sidebarOverlay');
-    const closeSidebar = document.getElementById('closeSidebar');
-    const mobileHeader = document.getElementById('mobileHeader');
-
-    function openSidebar() {
-      sidebar.classList.add('active');
-      sidebarOverlay.classList.remove('hidden');
-      if (mobileHeader) mobileHeader.style.display = 'none';
-      setTimeout(() => sidebarOverlay.classList.add('sidebar-overlay'), 10);
-    }
-    function closeSidebarFn() {
-      sidebar.classList.remove('active');
-      sidebarOverlay.classList.add('hidden');
-      sidebarOverlay.classList.remove('sidebar-overlay');
-      if (mobileHeader) mobileHeader.style.display = '';
-    }
-
-    hamburgerBtn.addEventListener('click', openSidebar);
-    sidebarOverlay.addEventListener('click', closeSidebarFn);
-    if (closeSidebar) closeSidebar.addEventListener('click', closeSidebarFn);
-
-    // Responsive: menampilkan sidebar secara default pada md+
-    function handleResize() {
-      if (window.innerWidth >= 768) {
-        sidebar.classList.add('active');
-        sidebarOverlay.classList.add('hidden');
-        if (mobileHeader) mobileHeader.style.display = 'none';
-      } else {
-        sidebar.classList.remove('active');
-        sidebarOverlay.classList.add('hidden');
-        if (mobileHeader) mobileHeader.style.display = '';
-      }
-    }
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('DOMContentLoaded', handleResize);
-  </script>
+  <script src="script.js" defer></script>
 </body>
 </html>
