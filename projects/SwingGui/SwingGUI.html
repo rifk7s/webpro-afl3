@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwingGUI - Project Detail</title>
+  <link href="../../src/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+
+<body class="bg-gray-50 min-h-screen">
+  <!-- Header Mobile -->
+  <header id="mobileHeader" class="fixed top-0 left-0 right-0 z-30 flex items-center justify-between bg-white px-4 py-3 border-b border-gray-200 md:hidden">
+    <div class="flex items-center gap-3">
+      <img src="../../img/1737690544838.jpeg" alt="Profile" class="w-8 h-8 rounded-full object-cover border-2 border-white shadow">
+      <span class="font-semibold text-base flex items-center gap-1">
+        Rifky Paranrengi
+        <span class="text-blue-500" style="font-size:1rem;line-height:1;">
+          <i class="fa-solid fa-circle-check"></i>
+        </span>
+      </span>
+    </div>
+    <div class="flex items-center gap-3">
+      <button id="hamburgerBtn" class="bg-white p-2 rounded-lg shadow border border-gray-200">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="flex min-h-screen">
+    <!-- Sidebar Overlay (Mobile) -->    <div id="sidebarOverlay" class="fixed inset-0 z-20 sidebar-overlay hidden md:hidden"></div>    <!-- Sidebar -->
+    <aside id="sidebar" class=" fixed z-40 top-0 left-0 h-full w-72 bg-white shadow-lg flex flex-col items-center py-8 px-6 min-h-screen border-r border-gray-200
+      md:w-72 md:translate-x-0 md:opacity-100 md:pointer-events-auto">
+        <!-- Close Button (only visible on mobile) -->
+      <button id="closeSidebar" class="absolute top-4 right-4 p-2 text-gray-500 hover:text-gray-700 md:hidden">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+      
+      <img src="../../img/1737690544838.jpeg" alt="Profile" class="w-24 h-24 rounded-full object-cover mb-6 border-4 border-white shadow-md">
+      <div class="flex flex-col items-start w-full mb-6">
+        <div class="flex items-center gap-2 mb-1 pl-4">
+          <h1 class="text-lg font-bold flex items-center">Rifky Paranrengi <span class="text-blue-500 ml-1" style="font-size:1rem;line-height:1;position:relative;top:2px;"><i class="fa-solid fa-circle-check"></i></span></h1>
+        </div>
+        <span class="text-gray-500 text-sm mb-3 pl-4">@rifkyp</span>
+        <button class="flex items-center gap-2 px-4 py-1 bg-green-50 text-green-700 rounded-full border border-green-200 text-sm font-medium hover:bg-green-100 transition mb-2 ml-4">
+          <span class="w-2 h-2 bg-green-500 rounded-full inline-block animate-pulse-dot"></span> Hire me.
+        </button>
+        <div class="flex items-center gap-1 ml-4">
+          <span class="px-2 py-0.5 bg-gray-200 text-xs font-semibold rounded text-gray-700 align-middle">Unpaid Intern</span>
+        </div>
+      </div>
+      <hr class="w-full border-gray-200 mb-4">
+      <nav class="flex flex-col gap-1 w-full mb-4">
+        <a href="../../index.html" class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="../../about.html" class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"><i class="fa-regular fa-user"></i> About</a>
+        <a href="../../projects.html" class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-900 bg-gray-100 text-sm"><i class="fa-regular fa-folder-open"></i> Projects</a>
+        <a href="../../contact.html" class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"><i class="fa-regular fa-envelope"></i> Contact</a>
+      </nav>
+      <hr class="w-full border-gray-200 mt-2 mb-4">
+      <div class="text-center text-xs text-gray-400 mt-auto">
+        COPYRIGHT © 2025<br>
+        Rifky Paranrengi. All rights reserved.
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-4 md:p-6 pt-20 md:pt-6 md:ml-72">
+      <div class="max-w-4xl mx-auto">
+        <!-- Back Button -->
+        <a href="../../projects.html" class="flex items-center gap-2 text-gray-600 hover:text-blue-600 mb-6 transition-colors">
+          <i class="fa-solid fa-arrow-left"></i> Back to Projects
+        </a>
+        
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <!-- Project Title -->
+          <h1 class="text-3xl font-bold text-gray-900 mb-2">SwingGUI</h1>
+          
+          <!-- Short Project Description -->
+          <p class="text-gray-700 mb-4">
+            SwingGUI is a Java Swing application designed to display and allow users to rate CS2 (Counter-Strike 2) weapon skins. The project demonstrates key Object-Oriented Programming (OOP) principles—including inheritance, encapsulation, abstraction, polymorphism, and composition—through a modular, dark-themed graphical user interface with navigation, card-based skin display, and rating features.
+          </p>
+
+          <hr class="my-6 border-gray-200">
+
+          <!-- Tech Stack & Links Row -->
+          <div class="flex flex-wrap items-center justify-between mb-6 gap-4">
+            <div class="flex items-center gap-3 flex-wrap">
+              <span class="text-gray-700 font-medium text-sm">Tech Stack:</span>
+              <i class="devicon-java-plain colored text-2xl" title="Java"></i>
+            </div>
+            <a href="https://github.com/rifk7s/SwingGUI" target="_blank" class="inline-flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors text-sm font-medium">
+              <i class="devicon-github-original text-lg"></i> Source Code
+            </a>
+          </div>
+
+          <!-- Project Screenshot (no H2 heading) -->
+          <div class="mb-8">
+            <div class="group border border-gray-200 rounded-lg overflow-hidden bg-gray-100 shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+              <img src="SwingGui1.png" alt="SwingGUI Screenshot 1" class="w-full max-h-[400px] object-contain transition-transform duration-300 group-hover:scale-105">
+            </div>
+            <!-- Optionally add more screenshots below -->
+            <!--
+            <div class="group border border-gray-200 rounded-lg overflow-hidden bg-gray-100 shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 mt-4">
+              <img src="SwingGui2.png" alt="SwingGUI Screenshot 2" class="w-full max-h-[400px] object-contain transition-transform duration-300 group-hover:scale-105">
+            </div>
+            <div class="group border border-gray-200 rounded-lg overflow-hidden bg-gray-100 shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 mt-4">
+              <img src="SwingGui3.png" alt="SwingGUI Screenshot 3" class="w-full max-h-[400px] object-contain transition-transform duration-300 group-hover:scale-105">
+            </div>
+            -->
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="../../script.js"></script>
+</body>
+</html>
