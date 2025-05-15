@@ -1,4 +1,11 @@
 {
+  "name": "webpro-afl3",
+  "version": "1.0.0",
+  "description": "A portfolio website for Rifky Paranrengi",
+  "main": "index.html",
+  "scripts": {
+    "test": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+  },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.5",
     "tailwindcss": "^4.1.5"

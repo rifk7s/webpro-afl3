@@ -30,12 +30,12 @@
   </header>
 
   <div class="flex min-h-screen">
-    <!-- Sidebar Overlay (Mobile) -->
-    <div id="sidebarOverlay" class="fixed inset-0 z-20 sidebar-overlay hidden md:hidden"></div>
-
-    <!-- Sidebar: Dekstop Selalu Visible, Mobile ya Hamburger Menu -->
+    <!-- Sidebar Overlay (Mobile) -->    <div id="sidebarOverlay" class="fixed inset-0 z-20 sidebar-overlay hidden md:hidden"></div>    <!-- Sidebar: Dekstop Selalu Visible, Mobile ya Hamburger Menu -->
     <aside id="sidebar" class="sidebar-fade fixed z-40 top-0 left-0 h-full w-72 bg-white shadow-lg flex flex-col items-center py-8 px-6 min-h-screen border-r border-gray-200
-      md:w-72 md:translate-x-0 md:opacity-100 md:pointer-events-auto active">
+      md:w-72 md:translate-x-0 md:opacity-100 md:pointer-events-auto active"><!-- Close Button (only visible on mobile) -->
+      <button id="closeSidebar" class="absolute top-4 right-4 p-2 text-gray-500 hover:text-gray-700 md:hidden">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
 
       <!-- Foto Profil dan Info -->
       <img src="img/1737690544838.jpeg" alt="Profile" class="w-24 h-24 rounded-full object-cover mb-6 border-4 border-white shadow-md">
@@ -161,7 +161,46 @@
       </div>
     </main>
   </div>
+<!-- JAVASCRIPTS AAAAAAAAAAAAAAAA -->
+  <script>
+    // Hamburger menu logic
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const closeSidebar = document.getElementById('closeSidebar');
+    const mobileHeader = document.getElementById('mobileHeader');
 
-  <script src="script.js" defer></script>
+    function openSidebar() {
+      sidebar.classList.add('active');
+      sidebarOverlay.classList.remove('hidden');
+      if (mobileHeader) mobileHeader.style.display = 'none';
+      setTimeout(() => sidebarOverlay.classList.add('sidebar-overlay'), 10);
+    }
+    function closeSidebarFn() {
+      sidebar.classList.remove('active');
+      sidebarOverlay.classList.add('hidden');
+      sidebarOverlay.classList.remove('sidebar-overlay');
+      if (mobileHeader) mobileHeader.style.display = '';
+    }
+
+    hamburgerBtn.addEventListener('click', openSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebarFn);
+    if (closeSidebar) closeSidebar.addEventListener('click', closeSidebarFn);
+
+    // Responsive: menampilkan sidebar secara default pada md+
+    function handleResize() {
+      if (window.innerWidth >= 768) {
+        sidebar.classList.add('active');
+        sidebarOverlay.classList.add('hidden');
+        if (mobileHeader) mobileHeader.style.display = 'none';
+      } else {
+        sidebar.classList.remove('active');
+        sidebarOverlay.classList.add('hidden');
+        if (mobileHeader) mobileHeader.style.display = '';
+      }
+    }
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('DOMContentLoaded', handleResize);
+  </script>
 </body>
 </html>
