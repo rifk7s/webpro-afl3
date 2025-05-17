@@ -41,4 +41,12 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   window.addEventListener('resize', handleResize);
   handleResize();
+
+  // Page loader logic
+  const loader = document.getElementById('loader');
+  if (loader) {
+    window.addEventListener('load', function() {
+      loader.style.display = 'none';
+    });
+  }
 });
