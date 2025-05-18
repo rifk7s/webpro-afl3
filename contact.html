@@ -1,216 +1,348 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Rifky Portfolio</title>
+    <link href="src/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Rifky Portfolio</title>
-  <link href="src/output.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-
-<body class="bg-gray-50 min-h-screen md:overflow-hidden">
-  <div id="loader" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 9999; background-color: #f9fafb; display: flex; justify-content: center; align-items: center;">
-    <p style="font-size: 1.25rem; color: #374151;">Loading...</p>
-  </div>
-  <!-- Header Mobile (hanya ditampilkan saat Sidebar ditutup, hanya untuk Mobile) -->
-  <header id="mobileHeader"
-    class="fixed top-0 left-0 right-0 z-30 flex items-center justify-between bg-white px-4 py-3 border-b border-gray-200 md:hidden">
-    <div class="flex items-center gap-3">
-      <img src="img/1737690544838.jpeg" alt="Profile"
-        class="w-8 h-8 rounded-full object-cover border-2 border-white shadow">
-      <span class="font-semibold text-base flex items-center gap-1">
-        Rifky Paranrengi
-        <span class="text-blue-500" style="font-size:1rem;line-height:1;">
-          <i class="fa-solid fa-circle-check"></i>
+  <body class="bg-gray-50 min-h-screen md:overflow-hidden">
+    <div
+      id="loader"
+      style="
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background-color: #f9fafb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <p style="font-size: 1.25rem; color: #374151">Loading...</p>
+    </div>
+    <!-- Header Mobile (hanya ditampilkan saat Sidebar ditutup, hanya untuk Mobile) -->
+    <header
+      id="mobileHeader"
+      class="fixed top-0 left-0 right-0 z-30 flex items-center justify-between bg-white px-4 py-3 border-b border-gray-200 md:hidden"
+    >
+      <div class="flex items-center gap-3">
+        <img
+          src="img/1737690544838.jpeg"
+          alt="Profile"
+          class="w-8 h-8 rounded-full object-cover border-2 border-white shadow"
+        />
+        <span class="font-semibold text-base flex items-center gap-1">
+          Rifky Paranrengi
+          <span class="text-blue-500" style="font-size: 1rem; line-height: 1">
+            <i class="fa-solid fa-circle-check"></i>
+          </span>
         </span>
-      </span>
-    </div>
-    <div class="flex items-center gap-3">
-
-      <button id="hamburgerBtn" class="bg-white p-2 rounded-lg shadow border border-gray-200">
-        <i class="fa-solid fa-bars text-xl"></i>
-      </button>
-    </div>
-  </header>
-
-  <div class="flex min-h-screen">
-    <!-- Sidebar Overlay (Mobile) -->
-    <div id="sidebarOverlay" class="fixed inset-0 z-20 sidebar-overlay hidden md:hidden"></div>
-    <!-- Sidebar: Dekstop Selalu Visible, Mobile ya Hamburger Menu -->
-    <aside id="sidebar" class="sidebar-fade sidebar-desktop-active fixed z-40 top-0 left-0 h-full w-72 bg-white shadow-lg flex flex-col items-center py-8 px-6 min-h-screen border-r border-gray-200
-      md:w-72 md:translate-x-0 md:opacity-100 md:pointer-events-auto">
-      <!-- Close Button (only visible on mobile) -->
-      <button id="closeSidebar" class="absolute top-4 right-4 p-2 text-gray-500 hover:text-gray-700 md:hidden">
-        <i class="fa-solid fa-xmark text-xl"></i>
-      </button>
-
-      <!-- Foto Profil dan Info -->
-      <img src="img/1737690544838.jpeg" alt="Profile"
-        class="w-24 h-24 rounded-full object-cover mb-6 border-4 border-white shadow-md">
-      <div class="flex flex-col items-start w-full mb-6">
-        <div class="flex items-center gap-2 mb-1 pl-4">
-          <h1 class="text-lg font-bold flex items-center">Rifky Paranrengi <span class="text-blue-500 ml-1"
-              style="font-size:1rem;line-height:1;position:relative;top:2px;"><i
-                class="fa-solid fa-circle-check"></i></span></h1>
-        </div>
-        <span class="text-gray-500 text-sm mb-3 pl-4">@rifkyp</span>
+      </div>
+      <div class="flex items-center gap-3">
         <button
-          class="flex items-center gap-2 px-4 py-1 bg-green-50 text-green-700 rounded-full border border-green-200 text-sm font-medium hover:bg-green-100 transition mb-2 ml-4">
-          <span class="w-2 h-2 bg-green-500 rounded-full inline-block animate-pulse-dot"></span> Hire me.
+          id="hamburgerBtn"
+          class="bg-white p-2 rounded-lg shadow border border-gray-200"
+        >
+          <i class="fa-solid fa-bars text-xl"></i>
         </button>
-        <div class="flex items-center gap-1 ml-4">
-          <span class="px-2 py-0.5 bg-gray-200 text-xs font-semibold rounded text-gray-700 align-middle">Unpaid
-            Intern</span>
-        </div>
       </div>
-      <hr class="w-full border-gray-200 mb-4">
-      <nav class="flex flex-col gap-1 w-full mb-4">
-        <a href="index.html"
-          class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"><i
-            class="fa-solid fa-house"></i> Home</a>
-        <a href="about.html"
-          class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"><i
-            class="fa-regular fa-user"></i> About</a>
-        <a href="projects.html"
-          class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"><i
-            class="fa-regular fa-folder-open"></i> Projects</a>
-        <a href="contact.html"
-          class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-900 bg-gray-100 text-sm"><i
-            class="fa-regular fa-envelope"></i> Contact</a>
-      </nav>
-      <hr class="w-full border-gray-200 mt-2 mb-4">
-      <div class="text-center text-xs text-gray-400 mt-auto">
-        COPYRIGHT © 2025<br>
-        Rifky Paranrengi. All rights reserved.
-      </div>
-    </aside>
+    </header>
 
-    <main class="flex-1 p-4 md:p-6 pt-20 md:pt-3.5 md:ml-72 md:max-h-screen">
-      <div class="max-w-3xl mx-auto">
-        <div class="mb-6">
-          <h2 class="text-2xl font-semibold mb-2">Contact</h2>
-          <p class="text-gray-600 text-base">Let's get in touch.</p>
-        </div>
-        <hr class="border-t border-neutral-300 my-6">
+    <div class="flex min-h-screen">
+      <!-- Sidebar Overlay (Mobile) -->
+      <div
+        id="sidebarOverlay"
+        class="fixed inset-0 z-20 sidebar-overlay hidden md:hidden"
+      ></div>
+      <!-- Sidebar: Dekstop Selalu Visible, Mobile ya Hamburger Menu -->
+      <aside
+        id="sidebar"
+        class="sidebar-fade sidebar-desktop-active fixed z-40 top-0 left-0 h-full w-72 bg-white shadow-lg flex flex-col items-center py-8 px-6 min-h-screen border-r border-gray-200 md:w-72 md:translate-x-0 md:opacity-100 md:pointer-events-auto"
+      >
+        <!-- Close Button (only visible on mobile) -->
+        <button
+          id="closeSidebar"
+          class="absolute top-4 right-4 p-2 text-gray-500 hover:text-gray-700 md:hidden"
+        >
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
 
-        <div class="mb-8">
-          <h3 class="text-lg font-semibold mb-4 text-gray-800">Find me on social media</h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <!-- Stay in Touch - Gmail -->
-            <div
-              class="md:col-span-2 bg-gradient-to-b from-pink-800 via-red-500 to-red-700 p-6 rounded-xl shadow-lg text-white relative overflow-hidden">
-              <div class="relative z-10 flex flex-col justify-between h-full">
-                <div>
-                  <h4 class="text-xl font-semibold mb-1">Stay in Touch</h4>
-                  <p class="text-sm opacity-90 mb-4">Reach out via email for any inquiries or collaborations.</p>
-                </div>
-                <a href="mailto:rifkip1337@gmail.com" target="_blank"
-                  class="inline-flex items-center justify-center gap-2 bg-white/38 hover:bg-white/48 text-white font-medium py-2 px-4 rounded-lg transition duration-150 text-sm self-start">
-                  Go to Gmail <i class="fa-regular fa-envelope"></i> <i
-                    class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-                </a>
-              </div>
-              <div
-                class="absolute -right-5 -bottom-3 md:-right-6 md:-bottom-2 flex items-center justify-center pointer-events-none z-0">
-                <i class="fa-regular fa-envelope text-8xl md:text-9xl text-white transform -rotate-[15deg]"
-                  style="filter: drop-shadow(0px 2px 3px rgba(0,0,0,0.25)); opacity: 0.3;"></i>
-              </div>
-            </div>
-
-            <!-- Follow My Journey - Instagram -->
-            <div
-              class="bg-gradient-to-br from-purple-600 via-pink-500 to-orange-500 p-6 rounded-xl shadow-lg text-white relative overflow-hidden">
-              <div class="relative z-10 flex flex-col justify-between h-full">
-                <div>
-                  <h4 class="text-xl font-semibold mb-1">Follow My Journey</h4>
-                  <p class="text-sm opacity-90 mb-4">Stay updated with my latest posts and stories on Instagram.</p>
-                </div>
-                <a href="https://www.instagram.com/rifkp7" target="_blank"
-                  class="inline-flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 text-white font-medium py-2 px-4 rounded-lg transition duration-150 text-sm self-start">
-                  Go to Instagram <i class="fa-brands fa-instagram"></i> <i
-                    class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-                </a>
-              </div>
-              <div
-                class="absolute -right-10 -bottom-3 md:-right-6 md:-bottom-2 flex items-center justify-center pointer-events-none z-0">
-                <i class="fa-brands fa-instagram text-8xl md:text-9xl text-white transform -rotate-[15deg]"
-                  style="filter: drop-shadow(0px 2px 3px rgba(0,0,0,0.25)); opacity: 0.1;"></i>
-              </div>
-            </div>
-
-            <!-- Let's Connect - LinkedIn -->
-            <div
-              class="bg-gradient-to-r from-blue-600 to-blue-500 p-6 rounded-xl shadow-lg text-white relative overflow-hidden">
-              <div class="relative z-10 flex flex-col justify-between h-full">
-                <div>
-                  <h4 class="text-xl font-semibold mb-1">Let's Connect</h4>
-                  <p class="text-sm opacity-90 mb-4">Connect for collaboration or explore my professional experience.
-                  </p>
-                </div>
-                <a href="https://www.linkedin.com/in/rifkyps/" target="_blank"
-                  class="inline-flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 text-white font-medium py-2 px-4 rounded-lg transition duration-150 text-sm self-start">
-                  Go to LinkedIn <i class="fa-brands fa-linkedin"></i> <i
-                    class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-                </a>
-              </div>
-              <div
-                class="absolute -right-5 -bottom-3 md:-right-6 md:-bottom-2 flex items-center justify-center pointer-events-none z-0">
-                <i class="fa-brands fa-linkedin text-8xl md:text-9xl text-white transform -rotate-[15deg]"
-                  style="filter: drop-shadow(0px 2px 3px rgba(0,0,0,0.25)); opacity: 0.1;"></i>
-              </div>
-            </div>
-
-            <!-- Join the Fun - TikTok -->
-            <div
-              class="bg-gradient-to-r from-gray-900 to-gray-800 p-6 rounded-xl shadow-lg text-white relative overflow-hidden">
-              <div class="relative z-10 flex flex-col justify-between h-full">
-                <div>
-                  <h4 class="text-xl font-semibold mb-1">Join the Fun</h4>
-                  <p class="text-sm opacity-90 mb-4">Follow me on TikTok for entertaining and engaging content.</p>
-                </div>
-                <a href="https://www.tiktok.com/#" target="_blank"
-                  class="inline-flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 text-white font-medium py-2 px-4 rounded-lg transition duration-150 text-sm self-start">
-                  Go to TikTok <i class="fa-brands fa-tiktok"></i> <i
-                    class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-                </a>
-              </div>
-              <div
-                class="absolute -right-6 -bottom-3 md:-right-6 md:-bottom-2 flex items-center justify-center pointer-events-none z-0">
-                <i class="fa-brands fa-tiktok text-8xl md:text-9xl text-white transform -rotate-[15deg]"
-                  style="filter: drop-shadow(0px 2px 3px rgba(0,0,0,0.25)); opacity: 0.1;"></i>
-              </div>
-            </div>
-
-            <!-- Explore the Code - GitHub -->
-            <div
-              class="bg-gradient-to-r from-gray-900 to-gray-700 p-6 rounded-xl shadow-lg text-white relative overflow-hidden">
-              <div class="relative z-10 flex flex-col justify-between h-full">
-                <div>
-                  <h4 class="text-xl font-semibold mb-1">Explore the Code</h4>
-                  <p class="text-sm opacity-90 mb-4">Explore the source code for all my projects on GitHub.</p>
-                </div>
-                <a href="https://github.com/rifk7s" target="_blank"
-                  class="inline-flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 text-white font-medium py-2 px-4 rounded-lg transition duration-150 text-sm self-start">
-                  Go to GitHub <i class="fa-brands fa-github"></i> <i
-                    class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-                </a>
-              </div>
-              <div
-                class="absolute -right-5 -bottom-3 md:-right-6 md:-bottom-2 flex items-center justify-center pointer-events-none z-0">
-                <i class="fa-brands fa-github text-8xl md:text-9xl text-white transform -rotate-[15deg]"
-                  style="filter: drop-shadow(0px 2px 3px rgba(0,0,0,0.25)); opacity: 0.1;"></i>
-              </div>
-            </div>
-
+        <!-- Foto Profil dan Info -->
+        <img
+          src="img/1737690544838.jpeg"
+          alt="Profile"
+          class="w-24 h-24 rounded-full object-cover mb-6 border-4 border-white shadow-md"
+        />
+        <div class="flex flex-col items-start w-full mb-6">
+          <div class="flex items-center gap-2 mb-1 pl-4">
+            <h1 class="text-lg font-bold flex items-center">
+              Rifky Paranrengi
+              <span
+                class="text-blue-500 ml-1"
+                style="
+                  font-size: 1rem;
+                  line-height: 1;
+                  position: relative;
+                  top: 2px;
+                "
+                ><i class="fa-solid fa-circle-check"></i
+              ></span>
+            </h1>
+          </div>
+          <span class="text-gray-500 text-sm mb-3 pl-4">@rifkyp</span>
+          <button
+            class="flex items-center gap-2 px-4 py-1 bg-green-50 text-green-700 rounded-full border border-green-200 text-sm font-medium hover:bg-green-100 transition mb-2 ml-4"
+          >
+            <span
+              class="w-2 h-2 bg-green-500 rounded-full inline-block animate-pulse-dot"
+            ></span>
+            Hire me.
+          </button>
+          <div class="flex items-center gap-1 ml-4">
+            <span
+              class="px-2 py-0.5 bg-gray-200 text-xs font-semibold rounded text-gray-700 align-middle"
+              >Unpaid Intern</span
+            >
           </div>
         </div>
-      </div>
-    </main>
-  </div>
-  <script src="script.js"></script>
-</body>
+        <hr class="w-full border-gray-200 mb-4" />
+        <nav class="flex flex-col gap-1 w-full mb-4">
+          <a
+            href="index.html"
+            class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"
+            ><i class="fa-solid fa-house"></i> Home</a
+          >
+          <a
+            href="about.html"
+            class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"
+            ><i class="fa-regular fa-user"></i> About</a
+          >
+          <a
+            href="projects.html"
+            class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"
+            ><i class="fa-regular fa-folder-open"></i> Projects</a
+          >
+          <a
+            href="contact.html"
+            class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-900 bg-gray-100 text-sm"
+            ><i class="fa-regular fa-envelope"></i> Contact</a
+          >
+        </nav>
+        <hr class="w-full border-gray-200 mt-2 mb-4" />
+        <div class="text-center text-xs text-gray-400 mt-auto">
+          COPYRIGHT © 2025<br />
+          Rifky Paranrengi. All rights reserved.
+        </div>
+      </aside>
 
+      <main class="flex-1 p-4 md:p-6 pt-20 md:pt-3.5 md:ml-72 md:max-h-screen">
+        <div class="max-w-3xl mx-auto">
+          <div class="mb-6">
+            <h2 class="text-2xl font-semibold mb-2">Contact</h2>
+            <p class="text-gray-600 text-base">Let's get in touch.</p>
+          </div>
+          <hr class="border-t border-neutral-300 my-6" />
+
+          <div class="mb-8">
+            <h3 class="text-lg font-semibold mb-4 text-gray-800">
+              Find me on social media
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <!-- Stay in Touch - Gmail -->
+              <div
+                class="md:col-span-2 bg-gradient-to-b from-pink-800 via-red-500 to-red-700 p-6 rounded-xl shadow-lg text-white relative overflow-hidden"
+              >
+                <div class="relative z-10 flex flex-col justify-between h-full">
+                  <div>
+                    <h4 class="text-xl font-semibold mb-1">Stay in Touch</h4>
+                    <p class="text-sm opacity-90 mb-4">
+                      Reach out via email for any inquiries or collaborations.
+                    </p>
+                  </div>
+                  <a
+                    href="mailto:rifkip1337@gmail.com"
+                    target="_blank"
+                    class="inline-flex items-center justify-center gap-2 bg-white/38 hover:bg-white/48 text-white font-medium py-2 px-4 rounded-lg transition duration-150 text-sm self-start"
+                  >
+                    Go to Gmail <i class="fa-regular fa-envelope"></i>
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square text-xs"
+                    ></i>
+                  </a>
+                </div>
+                <div
+                  class="absolute -right-5 -bottom-3 md:-right-6 md:-bottom-2 flex items-center justify-center pointer-events-none z-0"
+                >
+                  <i
+                    class="fa-regular fa-envelope text-8xl md:text-9xl text-white transform -rotate-[15deg]"
+                    style="
+                      filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.25));
+                      opacity: 0.3;
+                    "
+                  ></i>
+                </div>
+              </div>
+
+              <!-- Follow My Journey - Instagram -->
+              <div
+                class="bg-gradient-to-br from-purple-600 via-pink-500 to-orange-500 p-6 rounded-xl shadow-lg text-white relative overflow-hidden"
+              >
+                <div class="relative z-10 flex flex-col justify-between h-full">
+                  <div>
+                    <h4 class="text-xl font-semibold mb-1">
+                      Follow My Journey
+                    </h4>
+                    <p class="text-sm opacity-90 mb-4">
+                      Stay updated with my latest posts and stories on
+                      Instagram.
+                    </p>
+                  </div>
+                  <a
+                    href="https://www.instagram.com/rifkp7"
+                    target="_blank"
+                    class="inline-flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 text-white font-medium py-2 px-4 rounded-lg transition duration-150 text-sm self-start"
+                  >
+                    Go to Instagram <i class="fa-brands fa-instagram"></i>
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square text-xs"
+                    ></i>
+                  </a>
+                </div>
+                <div
+                  class="absolute -right-10 -bottom-3 md:-right-6 md:-bottom-2 flex items-center justify-center pointer-events-none z-0"
+                >
+                  <i
+                    class="fa-brands fa-instagram text-8xl md:text-9xl text-white transform -rotate-[15deg]"
+                    style="
+                      filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.25));
+                      opacity: 0.1;
+                    "
+                  ></i>
+                </div>
+              </div>
+
+              <!-- Let's Connect - LinkedIn -->
+              <div
+                class="bg-gradient-to-r from-blue-600 to-blue-500 p-6 rounded-xl shadow-lg text-white relative overflow-hidden"
+              >
+                <div class="relative z-10 flex flex-col justify-between h-full">
+                  <div>
+                    <h4 class="text-xl font-semibold mb-1">Let's Connect</h4>
+                    <p class="text-sm opacity-90 mb-4">
+                      Connect for collaboration or explore my professional
+                      experience.
+                    </p>
+                  </div>
+                  <a
+                    href="https://www.linkedin.com/in/rifkyps/"
+                    target="_blank"
+                    class="inline-flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 text-white font-medium py-2 px-4 rounded-lg transition duration-150 text-sm self-start"
+                  >
+                    Go to LinkedIn <i class="fa-brands fa-linkedin"></i>
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square text-xs"
+                    ></i>
+                  </a>
+                </div>
+                <div
+                  class="absolute -right-5 -bottom-3 md:-right-6 md:-bottom-2 flex items-center justify-center pointer-events-none z-0"
+                >
+                  <i
+                    class="fa-brands fa-linkedin text-8xl md:text-9xl text-white transform -rotate-[15deg]"
+                    style="
+                      filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.25));
+                      opacity: 0.1;
+                    "
+                  ></i>
+                </div>
+              </div>
+
+              <!-- Join the Fun - TikTok -->
+              <div
+                class="bg-gradient-to-r from-gray-900 to-gray-800 p-6 rounded-xl shadow-lg text-white relative overflow-hidden"
+              >
+                <div class="relative z-10 flex flex-col justify-between h-full">
+                  <div>
+                    <h4 class="text-xl font-semibold mb-1">Join the Fun</h4>
+                    <p class="text-sm opacity-90 mb-4">
+                      Follow me on TikTok for entertaining and engaging content.
+                    </p>
+                  </div>
+                  <a
+                    href="https://www.tiktok.com/#"
+                    target="_blank"
+                    class="inline-flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 text-white font-medium py-2 px-4 rounded-lg transition duration-150 text-sm self-start"
+                  >
+                    Go to TikTok <i class="fa-brands fa-tiktok"></i>
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square text-xs"
+                    ></i>
+                  </a>
+                </div>
+                <div
+                  class="absolute -right-6 -bottom-3 md:-right-6 md:-bottom-2 flex items-center justify-center pointer-events-none z-0"
+                >
+                  <i
+                    class="fa-brands fa-tiktok text-8xl md:text-9xl text-white transform -rotate-[15deg]"
+                    style="
+                      filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.25));
+                      opacity: 0.1;
+                    "
+                  ></i>
+                </div>
+              </div>
+
+              <!-- Explore the Code - GitHub -->
+              <div
+                class="bg-gradient-to-r from-gray-900 to-gray-700 p-6 rounded-xl shadow-lg text-white relative overflow-hidden"
+              >
+                <div class="relative z-10 flex flex-col justify-between h-full">
+                  <div>
+                    <h4 class="text-xl font-semibold mb-1">Explore the Code</h4>
+                    <p class="text-sm opacity-90 mb-4">
+                      Explore the source code for all my projects on GitHub.
+                    </p>
+                  </div>
+                  <a
+                    href="https://github.com/rifk7s"
+                    target="_blank"
+                    class="inline-flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 text-white font-medium py-2 px-4 rounded-lg transition duration-150 text-sm self-start"
+                  >
+                    Go to GitHub <i class="fa-brands fa-github"></i>
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square text-xs"
+                    ></i>
+                  </a>
+                </div>
+                <div
+                  class="absolute -right-5 -bottom-3 md:-right-6 md:-bottom-2 flex items-center justify-center pointer-events-none z-0"
+                >
+                  <i
+                    class="fa-brands fa-github text-8xl md:text-9xl text-white transform -rotate-[15deg]"
+                    style="
+                      filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.25));
+                      opacity: 0.1;
+                    "
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

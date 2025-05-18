@@ -1,107 +1,174 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found - Rifky Portfolio</title>
+    <link href="src/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found - Rifky Portfolio</title>
-  <link href="src/output.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-
-<body class="bg-gray-50 min-h-screen">
-  <div id="loader" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 9999; background-color: #f9fafb; display: flex; justify-content: center; align-items: center;">
-    <p style="font-size: 1.25rem; color: #374151;">Loading...</p>
-  </div>
-  <!-- Header Mobile -->
-  <header id="mobileHeader"
-    class="fixed top-0 left-0 right-0 z-30 flex items-center justify-between bg-white px-4 py-3 border-b border-gray-200 md:hidden">
-    <div class="flex items-center gap-3">
-      <img src="img/1737690544838.jpeg" alt="Profile"
-        class="w-8 h-8 rounded-full object-cover border-2 border-white shadow">
-      <span class="font-semibold text-base flex items-center gap-1">
-        Rifky Paranrengi
-        <span class="text-blue-500" style="font-size:1rem;line-height:1;">
-          <i class="fa-solid fa-circle-check"></i>
+  <body class="bg-gray-50 min-h-screen">
+    <div
+      id="loader"
+      style="
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background-color: #f9fafb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <p style="font-size: 1.25rem; color: #374151">Loading...</p>
+    </div>
+    <!-- Header Mobile -->
+    <header
+      id="mobileHeader"
+      class="fixed top-0 left-0 right-0 z-30 flex items-center justify-between bg-white px-4 py-3 border-b border-gray-200 md:hidden"
+    >
+      <div class="flex items-center gap-3">
+        <img
+          src="img/1737690544838.jpeg"
+          alt="Profile"
+          class="w-8 h-8 rounded-full object-cover border-2 border-white shadow"
+        />
+        <span class="font-semibold text-base flex items-center gap-1">
+          Rifky Paranrengi
+          <span class="text-blue-500" style="font-size: 1rem; line-height: 1">
+            <i class="fa-solid fa-circle-check"></i>
+          </span>
         </span>
-      </span>
-    </div>
-    <div class="flex items-center gap-3">
-      <button id="hamburgerBtn" class="bg-white p-2 rounded-lg shadow border border-gray-200">
-        <i class="fa-solid fa-bars text-xl"></i>
-      </button>
-    </div>
-  </header>
-
-  <div class="flex min-h-screen">
-    <!-- Sidebar Overlay (Mobile) -->
-    <div id="sidebarOverlay" class="fixed inset-0 z-20 sidebar-overlay hidden md:hidden"></div>
-    <!-- Sidebar: Dekstop Selalu Visible, Mobile ya Hamburger Menu -->
-    <aside id="sidebar" class="sidebar-fade sidebar-desktop-active fixed z-40 top-0 left-0 h-full w-72 bg-white shadow-lg flex flex-col items-center py-8 px-6 min-h-screen border-r border-gray-200
-      md:w-72 md:translate-x-0 md:opacity-100 md:pointer-events-auto">
-      <!-- Close Button (only visible on mobile) -->
-      <button id="closeSidebar" class="absolute top-4 right-4 p-2 text-gray-500 hover:text-gray-700 md:hidden">
-        <i class="fa-solid fa-xmark text-xl"></i>
-      </button>
-
-      <img src="img/1737690544838.jpeg" alt="Profile"
-        class="w-24 h-24 rounded-full object-cover mb-6 border-4 border-white shadow-md">
-      <div class="flex flex-col items-start w-full mb-6">
-        <div class="flex items-center gap-2 mb-1 pl-4">
-          <h1 class="text-lg font-bold flex items-center">Rifky Paranrengi <span class="text-blue-500 ml-1"
-              style="font-size:1rem;line-height:1;position:relative;top:2px;"><i
-                class="fa-solid fa-circle-check"></i></span></h1>
-        </div>
-        <span class="text-gray-500 text-sm mb-3 pl-4">@rifkyp</span>
+      </div>
+      <div class="flex items-center gap-3">
         <button
-          class="flex items-center gap-2 px-4 py-1 bg-green-50 text-green-700 rounded-full border border-green-200 text-sm font-medium hover:bg-green-100 transition mb-2 ml-4">
-          <span class="w-2 h-2 bg-green-500 rounded-full inline-block animate-pulse-dot"></span> Hire me.
+          id="hamburgerBtn"
+          class="bg-white p-2 rounded-lg shadow border border-gray-200"
+        >
+          <i class="fa-solid fa-bars text-xl"></i>
         </button>
-        <div class="flex items-center gap-1 ml-4">
-          <span class="px-2 py-0.5 bg-gray-200 text-xs font-semibold rounded text-gray-700 align-middle">Unpaid
-            Intern</span>
+      </div>
+    </header>
+
+    <div class="flex min-h-screen">
+      <!-- Sidebar Overlay (Mobile) -->
+      <div
+        id="sidebarOverlay"
+        class="fixed inset-0 z-20 sidebar-overlay hidden md:hidden"
+      ></div>
+      <!-- Sidebar: Dekstop Selalu Visible, Mobile ya Hamburger Menu -->
+      <aside
+        id="sidebar"
+        class="sidebar-fade sidebar-desktop-active fixed z-40 top-0 left-0 h-full w-72 bg-white shadow-lg flex flex-col items-center py-8 px-6 min-h-screen border-r border-gray-200 md:w-72 md:translate-x-0 md:opacity-100 md:pointer-events-auto"
+      >
+        <!-- Close Button (only visible on mobile) -->
+        <button
+          id="closeSidebar"
+          class="absolute top-4 right-4 p-2 text-gray-500 hover:text-gray-700 md:hidden"
+        >
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+
+        <img
+          src="img/1737690544838.jpeg"
+          alt="Profile"
+          class="w-24 h-24 rounded-full object-cover mb-6 border-4 border-white shadow-md"
+        />
+        <div class="flex flex-col items-start w-full mb-6">
+          <div class="flex items-center gap-2 mb-1 pl-4">
+            <h1 class="text-lg font-bold flex items-center">
+              Rifky Paranrengi
+              <span
+                class="text-blue-500 ml-1"
+                style="
+                  font-size: 1rem;
+                  line-height: 1;
+                  position: relative;
+                  top: 2px;
+                "
+                ><i class="fa-solid fa-circle-check"></i
+              ></span>
+            </h1>
+          </div>
+          <span class="text-gray-500 text-sm mb-3 pl-4">@rifkyp</span>
+          <button
+            class="flex items-center gap-2 px-4 py-1 bg-green-50 text-green-700 rounded-full border border-green-200 text-sm font-medium hover:bg-green-100 transition mb-2 ml-4"
+          >
+            <span
+              class="w-2 h-2 bg-green-500 rounded-full inline-block animate-pulse-dot"
+            ></span>
+            Hire me.
+          </button>
+          <div class="flex items-center gap-1 ml-4">
+            <span
+              class="px-2 py-0.5 bg-gray-200 text-xs font-semibold rounded text-gray-700 align-middle"
+              >Unpaid Intern</span
+            >
+          </div>
         </div>
-      </div>
-      <hr class="w-full border-gray-200 mb-4">
-      <nav class="flex flex-col gap-1 w-full mb-4">
-        <a href="index.html"
-          class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"><i
-            class="fa-solid fa-house"></i> Home</a>
-        <a href="about.html"
-          class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"><i
-            class="fa-regular fa-user"></i> About</a>
-        <a href="projects.html"
-          class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"><i
-            class="fa-regular fa-folder-open"></i> Projects</a>
-        <a href="contact.html"
-          class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"><i
-            class="fa-regular fa-envelope"></i> Contact</a>
-      </nav>
-      <hr class="w-full border-gray-200 mt-2 mb-4">
-      <div class="text-center text-xs text-gray-400 mt-auto">
-        COPYRIGHT © 2025<br>
-        Rifky Paranrengi. All rights reserved.
-      </div>
-    </aside>
+        <hr class="w-full border-gray-200 mb-4" />
+        <nav class="flex flex-col gap-1 w-full mb-4">
+          <a
+            href="index.html"
+            class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"
+            ><i class="fa-solid fa-house"></i> Home</a
+          >
+          <a
+            href="about.html"
+            class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"
+            ><i class="fa-regular fa-user"></i> About</a
+          >
+          <a
+            href="projects.html"
+            class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"
+            ><i class="fa-regular fa-folder-open"></i> Projects</a
+          >
+          <a
+            href="contact.html"
+            class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"
+            ><i class="fa-regular fa-envelope"></i> Contact</a
+          >
+        </nav>
+        <hr class="w-full border-gray-200 mt-2 mb-4" />
+        <div class="text-center text-xs text-gray-400 mt-auto">
+          COPYRIGHT © 2025<br />
+          Rifky Paranrengi. All rights reserved.
+        </div>
+      </aside>
 
-    <!-- Main Content -->
-    <main class="flex-1 p-4 md:p-6 pt-20 md:pt-6 md:ml-72">
-      <div class="max-w-3xl mx-auto text-center py-16">
-        <img src="https://cdn.rawgit.com/ahmedhosna95/upload/1731955f/sad404.svg" alt="Sad face for 404 Error" class="mx-auto mb-8 w-1/3 md:w-1/4">
-        <h1 class="text-4xl font-bold text-gray-800 mb-4">404 - Page Not Found</h1>
-        <p class="text-gray-600 text-lg mb-8">
-          Oops! The page you're looking for doesn't seem to exist.
-        </p>
-        <a href="index.html"
-          class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-6 rounded-lg transition duration-150 text-sm">
-          <i class="fa-solid fa-house"></i> Go to Homepage
-        </a>
-      </div>
-    </main>
-  </div>
-  <script src="script.js"></script>
-</body>
-
+      <!-- Main Content -->
+      <main class="flex-1 p-4 md:p-6 pt-20 md:pt-6 md:ml-72">
+        <div class="max-w-3xl mx-auto text-center py-16">
+          <img
+            src="https://cdn.rawgit.com/ahmedhosna95/upload/1731955f/sad404.svg"
+            alt="Sad face for 404 Error"
+            class="mx-auto mb-8 w-1/3 md:w-1/4"
+          />
+          <h1 class="text-4xl font-bold text-gray-800 mb-4">
+            404 - Page Not Found
+          </h1>
+          <p class="text-gray-600 text-lg mb-8">
+            Oops! The page you're looking for doesn't seem to exist.
+          </p>
+          <a
+            href="index.html"
+            class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-6 rounded-lg transition duration-150 text-sm"
+          >
+            <i class="fa-solid fa-house"></i> Go to Homepage
+          </a>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
