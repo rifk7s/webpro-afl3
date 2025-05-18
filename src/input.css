@@ -20,7 +20,6 @@
 
 /* ijo ijo bergerak */
 @keyframes pulse-dot {
-
   0%,
   100% {
     transform: scale(1);
@@ -37,7 +36,6 @@
 
 /* bagian home dekat contact */
 @keyframes pulse-handshake {
-
   0%,
   100% {
     transform: scale(1);

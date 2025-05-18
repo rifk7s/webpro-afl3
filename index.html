@@ -1,165 +1,277 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Rifky Portfolio</title>
+    <link href="src/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - Rifky Portfolio</title>
-  <link href="src/output.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-
-<body class="bg-gray-50 min-h-screen md:overflow-hidden">
-  <div id="loader" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 9999; background-color: #f9fafb; display: flex; justify-content: center; align-items: center;">
-    <p style="font-size: 1.25rem; color: #374151;">Loading...</p>
-  </div>
-  <!-- Header Mobile (hanya ditampilkan saat Sidebar ditutup, hanya untuk Mobile) -->
-  <header id="mobileHeader"
-    class="fixed top-0 left-0 right-0 z-30 flex items-center justify-between bg-white px-4 py-3 border-b border-gray-200 md:hidden">
-    <div class="flex items-center gap-3">
-      <img src="img/1737690544838.jpeg" alt="Profile"
-        class="w-8 h-8 rounded-full object-cover border-2 border-white shadow">
-      <span class="font-semibold text-base flex items-center gap-1">
-        Rifky Paranrengi
-        <span class="text-blue-500" style="font-size:1rem;line-height:1;">
-          <i class="fa-solid fa-circle-check"></i>
+  <body class="bg-gray-50 min-h-screen md:overflow-hidden">
+    <div
+      id="loader"
+      style="
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background-color: #f9fafb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <p style="font-size: 1.25rem; color: #374151">Loading...</p>
+    </div>
+    <!-- Header Mobile (hanya ditampilkan saat Sidebar ditutup, hanya untuk Mobile) -->
+    <header
+      id="mobileHeader"
+      class="fixed top-0 left-0 right-0 z-30 flex items-center justify-between bg-white px-4 py-3 border-b border-gray-200 md:hidden"
+    >
+      <div class="flex items-center gap-3">
+        <img
+          src="img/1737690544838.jpeg"
+          alt="Profile"
+          class="w-8 h-8 rounded-full object-cover border-2 border-white shadow"
+        />
+        <span class="font-semibold text-base flex items-center gap-1">
+          Rifky Paranrengi
+          <span class="text-blue-500" style="font-size: 1rem; line-height: 1">
+            <i class="fa-solid fa-circle-check"></i>
+          </span>
         </span>
-      </span>
-    </div>
-    <div class="flex items-center gap-3">
-
-      <button id="hamburgerBtn" class="bg-white p-2 rounded-lg shadow border border-gray-200">
-        <i class="fa-solid fa-bars text-xl"></i>
-      </button>
-    </div>
-  </header>
-
-  <div class="flex min-h-screen">
-    <!-- Sidebar Overlay (Mobile) -->
-    <div id="sidebarOverlay" class="fixed inset-0 z-20 sidebar-overlay hidden md:hidden"></div>
-
-    <!-- Sidebar: Dekstop Selalu Visible, Mobile ya Hamburger Menu -->
-    <aside id="sidebar" class="sidebar-fade sidebar-desktop-active fixed z-40 top-0 left-0 h-full w-72 bg-white shadow-lg flex flex-col items-center py-8 px-6 min-h-screen border-r border-gray-200
-      md:w-72 md:translate-x-0 md:opacity-100 md:pointer-events-auto">
-
-      <!-- Foto Profil dan Info -->
-      <img src="img/1737690544838.jpeg" alt="Profile"
-        class="w-24 h-24 rounded-full object-cover mb-6 border-4 border-white shadow-md">
-      <div class="flex flex-col items-start w-full mb-6">
-        <div class="flex items-center gap-2 mb-1 pl-4">
-          <h1 class="text-lg font-bold flex items-center">Rifky Paranrengi <span class="text-blue-500 ml-1"
-              style="font-size:1rem;line-height:1;position:relative;top:2px;"><i
-                class="fa-solid fa-circle-check"></i></span></h1>
-        </div>
-        <span class="text-gray-500 text-sm mb-3 pl-4">@rifkyp</span>
+      </div>
+      <div class="flex items-center gap-3">
         <button
-          class="flex items-center gap-2 px-4 py-1 bg-green-50 text-green-700 rounded-full border border-green-200 text-sm font-medium hover:bg-green-100 transition mb-2 ml-4">
-          <span class="w-2 h-2 bg-green-500 rounded-full inline-block animate-pulse-dot"></span> Hire me.
+          id="hamburgerBtn"
+          class="bg-white p-2 rounded-lg shadow border border-gray-200"
+        >
+          <i class="fa-solid fa-bars text-xl"></i>
         </button>
-        <div class="flex items-center gap-1 ml-4">
-          <span class="px-2 py-0.5 bg-gray-200 text-xs font-semibold rounded text-gray-700 align-middle">Unpaid
-            Intern</span>
-        </div>
       </div>
-      <hr class="w-full border-gray-200 mb-4">
-      <nav class="flex flex-col gap-1 w-full mb-4">
-        <a href="index.html"
-          class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-900 bg-gray-100 text-sm"><i
-            class="fa-solid fa-house"></i> Home</a>
-        <a href="about.html"
-          class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"><i
-            class="fa-regular fa-user"></i> About</a>
-        <a href="projects.html"
-          class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"><i
-            class="fa-regular fa-folder-open"></i> Projects</a>
-        <a href="contact.html"
-          class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"><i
-            class="fa-regular fa-envelope"></i> Contact</a>
-      </nav>
-      <hr class="w-full border-gray-200 mt-2 mb-4">
-      <div class="text-center text-xs text-gray-400 mt-auto">
-        COPYRIGHT © 2025<br>
-        Rifky Paranrengi. All rights reserved.
-      </div>
-    </aside>
+    </header>
 
-    <main class="flex-1 p-4 md:p-6 pt-20 md:pt-6 md:ml-72 md:h-screen">
-      <div class="max-w-3xl mx-auto">
-        <div class="mb-6">
-          <h2 class="text-2xl font-semibold mb-2">Hi, I'm Rifky Paranrengi</h2>
-          <ul
-            class="ml-5 flex list-disc flex-col md:flex-row md:items-center gap-x-6 gap-y-1 text-neutral-700 text-base mb-2">
-            <li>Based in Makassar, Indonesia <span class="ml-1">🇮🇩</span></li>
-            <li><span class="font-normal">Onsite</span></li>
-          </ul>
-          <p class="text-gray-700 mb-2 text-base leading-relaxed">
-            As I continue my studies, I hope to get practical experience and contribute to real-world projects. I am a
-            second-semester undergraduate studying informatics at Ciputra Surabaya University, and I am interested in
-            learning fullstack development. I am currently working on developing my skills in both frontend and backend
-            technologies through coursework and personal projects.
-          </p>
-        </div>
-        <hr class="border-t border-neutral-300 my-6">
-        <div class="mb-4">
-          <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i class="fa-solid fa-code"></i> Skills</h3>
-          <p class="text-gray-600 text-base mb-3">My current learning skills.</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"><i
-                class="fa-brands fa-bootstrap text-purple-600"></i>Bootstrap</span>
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"><i
-                class="fa-brands fa-css3-alt text-blue-500"></i>CSS</span>
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"><i
-                class="fa-brands fa-figma text-pink-500"></i>Figma</span>
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"><i
-                class="fa-brands fa-git-alt text-orange-600"></i>Git</span>
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"><i
-                class="fa-brands fa-github text-gray-800"></i>GitHub</span>
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"><i
-                class="fa-brands fa-html5 text-orange-500"></i>HTML/CSS</span>
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"><i
-                class="fa-brands fa-java text-red-700"></i>Java (OpenJDK 21)</span>
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"><i
-                class="fa-brands fa-js text-yellow-400"></i>JavaScript</span>
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"><i
-                class="fa-solid fa-database text-blue-700"></i>MySQL Workbench</span>
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"><i
-                class="fa-brands fa-node-js text-green-600"></i>npm (Node.js)</span>
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"><i
-                class="fa-brands fa-python text-blue-400"></i>Python</span>
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"><i
-                class="fa-solid fa-wind text-cyan-500"></i>TailwindCSS</span>
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"><i
-                class="fa-brands fa-java text-green-700"></i>Gradle</span>
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm opacity-70">
-              <i class="fa-solid fa-ellipsis-h text-gray-400"></i>More incoming
-            </span>
+    <div class="flex min-h-screen">
+      <!-- Sidebar Overlay (Mobile) -->
+      <div
+        id="sidebarOverlay"
+        class="fixed inset-0 z-20 sidebar-overlay hidden md:hidden"
+      ></div>
+
+      <!-- Sidebar: Dekstop Selalu Visible, Mobile ya Hamburger Menu -->
+      <aside
+        id="sidebar"
+        class="sidebar-fade sidebar-desktop-active fixed z-40 top-0 left-0 h-full w-72 bg-white shadow-lg flex flex-col items-center py-8 px-6 min-h-screen border-r border-gray-200 md:w-72 md:translate-x-0 md:opacity-100 md:pointer-events-auto"
+      >
+        <!-- Foto Profil dan Info -->
+        <img
+          src="img/1737690544838.jpeg"
+          alt="Profile"
+          class="w-24 h-24 rounded-full object-cover mb-6 border-4 border-white shadow-md"
+        />
+        <div class="flex flex-col items-start w-full mb-6">
+          <div class="flex items-center gap-2 mb-1 pl-4">
+            <h1 class="text-lg font-bold flex items-center">
+              Rifky Paranrengi
+              <span
+                class="text-blue-500 ml-1"
+                style="
+                  font-size: 1rem;
+                  line-height: 1;
+                  position: relative;
+                  top: 2px;
+                "
+                ><i class="fa-solid fa-circle-check"></i
+              ></span>
+            </h1>
+          </div>
+          <span class="text-gray-500 text-sm mb-3 pl-4">@rifkyp</span>
+          <button
+            class="flex items-center gap-2 px-4 py-1 bg-green-50 text-green-700 rounded-full border border-green-200 text-sm font-medium hover:bg-green-100 transition mb-2 ml-4"
+          >
+            <span
+              class="w-2 h-2 bg-green-500 rounded-full inline-block animate-pulse-dot"
+            ></span>
+            Hire me.
+          </button>
+          <div class="flex items-center gap-1 ml-4">
+            <span
+              class="px-2 py-0.5 bg-gray-200 text-xs font-semibold rounded text-gray-700 align-middle"
+              >Unpaid Intern</span
+            >
           </div>
         </div>
-        <hr class="border-t border-neutral-300 my-4">
-        <div class="mb-4">
-          <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i class="fa-solid fa-users"></i> Activities
-          </h3>
-          <p class="text-gray-700 text-base mb-3">As a second semester student, I'm actively learning, collaborating on
-            small projects, and exploring new technologies. I enjoy participating in coding communities and contributing
-            to open source when possible.</p>
-          <div class="bg-gray-100 border border-gray-200 rounded-xl p-4 flex flex-col gap-2">
-            <div class="flex items-center gap-2 font-semibold text-gray-800 text-base"><i
-                class="fa-solid fa-handshake-angle text-xl text-blue-500 animate-pulse-handshake"></i> Let's connect and
-              learn together!</div>
-            <p class="text-gray-700 text-sm">I'm always open to new opportunities, collaborations, and discussions about
-              tech. Feel free to reach out!</p>
-            <a href="contact.html"
-              class="self-start px-3.5 py-2 bg-gray-700 text-white rounded-lg font-medium hover:bg-gray-800 transition text-sm">Contact
-              me</a>
+        <hr class="w-full border-gray-200 mb-4" />
+        <nav class="flex flex-col gap-1 w-full mb-4">
+          <a
+            href="index.html"
+            class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-900 bg-gray-100 text-sm"
+            ><i class="fa-solid fa-house"></i> Home</a
+          >
+          <a
+            href="about.html"
+            class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"
+            ><i class="fa-regular fa-user"></i> About</a
+          >
+          <a
+            href="projects.html"
+            class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"
+            ><i class="fa-regular fa-folder-open"></i> Projects</a
+          >
+          <a
+            href="contact.html"
+            class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"
+            ><i class="fa-regular fa-envelope"></i> Contact</a
+          >
+        </nav>
+        <hr class="w-full border-gray-200 mt-2 mb-4" />
+        <div class="text-center text-xs text-gray-400 mt-auto">
+          COPYRIGHT © 2025<br />
+          Rifky Paranrengi. All rights reserved.
+        </div>
+      </aside>
+
+      <main class="flex-1 p-4 md:p-6 pt-20 md:pt-6 md:ml-72 md:h-screen">
+        <div class="max-w-3xl mx-auto">
+          <div class="mb-6">
+            <h2 class="text-2xl font-semibold mb-2">
+              Hi, I'm Rifky Paranrengi
+            </h2>
+            <ul
+              class="ml-5 flex list-disc flex-col md:flex-row md:items-center gap-x-6 gap-y-1 text-neutral-700 text-base mb-2"
+            >
+              <li>Based in Makassar, Indonesia <span class="ml-1">🇮🇩</span></li>
+              <li><span class="font-normal">Onsite</span></li>
+            </ul>
+            <p class="text-gray-700 mb-2 text-base leading-relaxed">
+              As I continue my studies, I hope to get practical experience and
+              contribute to real-world projects. I am a second-semester
+              undergraduate studying informatics at Ciputra Surabaya University,
+              and I am interested in learning fullstack development. I am
+              currently working on developing my skills in both frontend and
+              backend technologies through coursework and personal projects.
+            </p>
+          </div>
+          <hr class="border-t border-neutral-300 my-6" />
+          <div class="mb-4">
+            <h3 class="text-lg font-semibold mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-code"></i> Skills
+            </h3>
+            <p class="text-gray-600 text-base mb-3">
+              My current learning skills.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"
+                ><i class="fa-brands fa-bootstrap text-purple-600"></i
+                >Bootstrap</span
+              >
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"
+                ><i class="fa-brands fa-css3-alt text-blue-500"></i>CSS</span
+              >
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"
+                ><i class="fa-brands fa-figma text-pink-500"></i>Figma</span
+              >
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"
+                ><i class="fa-brands fa-git-alt text-orange-600"></i>Git</span
+              >
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"
+                ><i class="fa-brands fa-github text-gray-800"></i>GitHub</span
+              >
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"
+                ><i class="fa-brands fa-html5 text-orange-500"></i
+                >HTML/CSS</span
+              >
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"
+                ><i class="fa-brands fa-java text-red-700"></i>Java (OpenJDK
+                21)</span
+              >
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"
+                ><i class="fa-brands fa-js text-yellow-400"></i>JavaScript</span
+              >
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"
+                ><i class="fa-solid fa-database text-blue-700"></i>MySQL
+                Workbench</span
+              >
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"
+                ><i class="fa-brands fa-node-js text-green-600"></i>npm
+                (Node.js)</span
+              >
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"
+                ><i class="fa-brands fa-python text-blue-400"></i>Python</span
+              >
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"
+                ><i class="fa-solid fa-wind text-cyan-500"></i>TailwindCSS</span
+              >
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"
+                ><i class="fa-brands fa-java text-green-700"></i>Gradle</span
+              >
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm opacity-70"
+              >
+                <i class="fa-solid fa-ellipsis-h text-gray-400"></i>More
+                incoming
+              </span>
+            </div>
+          </div>
+          <hr class="border-t border-neutral-300 my-4" />
+          <div class="mb-4">
+            <h3 class="text-lg font-semibold mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-users"></i> Activities
+            </h3>
+            <p class="text-gray-700 text-base mb-3">
+              As a second semester student, I'm actively learning, collaborating
+              on small projects, and exploring new technologies. I enjoy
+              participating in coding communities and contributing to open
+              source when possible.
+            </p>
+            <div
+              class="bg-gray-100 border border-gray-200 rounded-xl p-4 flex flex-col gap-2"
+            >
+              <div
+                class="flex items-center gap-2 font-semibold text-gray-800 text-base"
+              >
+                <i
+                  class="fa-solid fa-handshake-angle text-xl text-blue-500 animate-pulse-handshake"
+                ></i>
+                Let's connect and learn together!
+              </div>
+              <p class="text-gray-700 text-sm">
+                I'm always open to new opportunities, collaborations, and
+                discussions about tech. Feel free to reach out!
+              </p>
+              <a
+                href="contact.html"
+                class="self-start px-3.5 py-2 bg-gray-700 text-white rounded-lg font-medium hover:bg-gray-800 transition text-sm"
+                >Contact me</a
+              >
+            </div>
           </div>
         </div>
-      </div>
-    </main>
-  </div>
+      </main>
+    </div>
 
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>

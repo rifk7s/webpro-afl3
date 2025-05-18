@@ -1,271 +1,408 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Rifky Portfolio</title>
+    <link href="src/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - Rifky Portfolio</title>
-  <link href="src/output.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-
-<body class="bg-gray-50 min-h-screen">
-  <div id="loader" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 9999; background-color: #f9fafb; display: flex; justify-content: center; align-items: center;">
-    <p style="font-size: 1.25rem; color: #374151;">Loading...</p>
-  </div>
-  <!-- Header Mobile -->
-  <header id="mobileHeader"
-    class="fixed top-0 left-0 right-0 z-30 flex items-center justify-between bg-white px-4 py-3 border-b border-gray-200 md:hidden">
-    <div class="flex items-center gap-3">
-      <img src="img/1737690544838.jpeg" alt="Profile"
-        class="w-8 h-8 rounded-full object-cover border-2 border-white shadow">
-      <span class="font-semibold text-base flex items-center gap-1">
-        Rifky Paranrengi
-        <span class="text-blue-500" style="font-size:1rem;line-height:1;">
-          <i class="fa-solid fa-circle-check"></i>
+  <body class="bg-gray-50 min-h-screen">
+    <div
+      id="loader"
+      style="
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background-color: #f9fafb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <p style="font-size: 1.25rem; color: #374151">Loading...</p>
+    </div>
+    <!-- Header Mobile -->
+    <header
+      id="mobileHeader"
+      class="fixed top-0 left-0 right-0 z-30 flex items-center justify-between bg-white px-4 py-3 border-b border-gray-200 md:hidden"
+    >
+      <div class="flex items-center gap-3">
+        <img
+          src="img/1737690544838.jpeg"
+          alt="Profile"
+          class="w-8 h-8 rounded-full object-cover border-2 border-white shadow"
+        />
+        <span class="font-semibold text-base flex items-center gap-1">
+          Rifky Paranrengi
+          <span class="text-blue-500" style="font-size: 1rem; line-height: 1">
+            <i class="fa-solid fa-circle-check"></i>
+          </span>
         </span>
-      </span>
-    </div>
-    <div class="flex items-center gap-3">
-      <button id="hamburgerBtn" class="bg-white p-2 rounded-lg shadow border border-gray-200">
-        <i class="fa-solid fa-bars text-xl"></i>
-      </button>
-    </div>
-  </header>
-
-  <div class="flex min-h-screen">
-    <!-- Sidebar Overlay (Mobile) -->
-    <div id="sidebarOverlay" class="fixed inset-0 z-20 sidebar-overlay hidden md:hidden"></div>
-    <!-- Sidebar: Dekstop Selalu Visible, Mobile ya Hamburger Menu -->
-    <aside id="sidebar" class="sidebar-fade sidebar-desktop-active fixed z-40 top-0 left-0 h-full w-72 bg-white shadow-lg flex flex-col items-center py-8 px-6 min-h-screen border-r border-gray-200
-      md:w-72 md:translate-x-0 md:opacity-100 md:pointer-events-auto">
-      <!-- Close Button (only visible on mobile) -->
-      <button id="closeSidebar" class="absolute top-4 right-4 p-2 text-gray-500 hover:text-gray-700 md:hidden">
-        <i class="fa-solid fa-xmark text-xl"></i>
-      </button>
-
-      <img src="img/1737690544838.jpeg" alt="Profile"
-        class="w-24 h-24 rounded-full object-cover mb-6 border-4 border-white shadow-md">
-      <div class="flex flex-col items-start w-full mb-6">
-        <div class="flex items-center gap-2 mb-1 pl-4">
-          <h1 class="text-lg font-bold flex items-center">Rifky Paranrengi <span class="text-blue-500 ml-1"
-              style="font-size:1rem;line-height:1;position:relative;top:2px;"><i
-                class="fa-solid fa-circle-check"></i></span></h1>
-        </div>
-        <span class="text-gray-500 text-sm mb-3 pl-4">@rifkyp</span>
+      </div>
+      <div class="flex items-center gap-3">
         <button
-          class="flex items-center gap-2 px-4 py-1 bg-green-50 text-green-700 rounded-full border border-green-200 text-sm font-medium hover:bg-green-100 transition mb-2 ml-4">
-          <span class="w-2 h-2 bg-green-500 rounded-full inline-block animate-pulse-dot"></span> Hire me.
+          id="hamburgerBtn"
+          class="bg-white p-2 rounded-lg shadow border border-gray-200"
+        >
+          <i class="fa-solid fa-bars text-xl"></i>
         </button>
-        <div class="flex items-center gap-1 ml-4">
-          <span class="px-2 py-0.5 bg-gray-200 text-xs font-semibold rounded text-gray-700 align-middle">Unpaid
-            Intern</span>
-        </div>
       </div>
-      <hr class="w-full border-gray-200 mb-4">
-      <nav class="flex flex-col gap-1 w-full mb-4">
-        <a href="index.html"
-          class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"><i
-            class="fa-solid fa-house"></i> Home</a>
-        <a href="about.html"
-          class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-900 bg-gray-100 text-sm"><i
-            class="fa-regular fa-user"></i> About</a>
-        <a href="projects.html"
-          class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"><i
-            class="fa-regular fa-folder-open"></i> Projects</a>
-        <a href="contact.html"
-          class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"><i
-            class="fa-regular fa-envelope"></i> Contact</a>
-      </nav>
-      <hr class="w-full border-gray-200 mt-2 mb-4">
-      <div class="text-center text-xs text-gray-400 mt-auto">
-        COPYRIGHT © 2025<br>
-        Rifky Paranrengi. All rights reserved.
-      </div>
-    </aside>
+    </header>
 
-    <!-- Main Content -->
-    <main class="flex-1 p-4 md:p-6 pt-20 md:pt-6 md:ml-72">
-      <div class="max-w-3xl mx-auto">
-        <div class="mb-6">
-          <h2 class="text-2xl font-semibold mb-2">About</h2>
-          <p class="text-gray-600 mb-2 text-base">A short story of me</p>
-        </div>
-        <hr class="border-t border-neutral-300 my-6">
-        <div class="mb-6">
-          <p class="text-gray-700 text-base leading-relaxed mb-2">
-            Hello! I'm Rifky Paranrengi, a passionate second-semester student at Ciputra Surabaya University, studying
-            Informatics. I'm enthusiastic about technology and software development, with a growing focus on both
-            frontend and backend technologies.
-          </p>
-          <p class="text-gray-700 text-base leading-relaxed mb-2">
-            My journey in programming began recently, but I've already developed a strong interest in building
-            meaningful applications that solve real-world problems. I believe in learning by doing, which is why I'm
-            constantly working on personal projects to improve my skills.
-          </p>
-        </div>
-        <hr class="border-t border-neutral-300 my-6">
-        <!-- Education Section -->
-        <div class="mb-6">
-          <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i class="fa-solid fa-graduation-cap"></i>
-            Education</h3>
-          <div class="flex flex-col gap-4">
-            <!-- University -->
-            <div
-              class="flex items-center rounded-xl border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md p-4 gap-4">
-              <img src="img/ciputra.png" alt="University Logo"
-                class="w-14 h-14 rounded-full object-cover flex-shrink-0">
-              <div>
-                <div class="font-semibold text-base">Ciputra Surabaya University</div>
-                <div class="flex items-center text-gray-500 text-sm gap-2">
-                  <span>Surabaya</span>
-                  <span class="text-xs">•</span>
-                  <span>2024 - Present</span>
-                </div>
-                <div class="text-xs text-gray-500 mt-1">~ Current</div>
-                <div class="text-gray-600 text-sm">Undergraduate, Informatics</div>
-              </div>
-            </div>
-            <!-- High School -->
-            <div
-              class="flex items-center rounded-xl border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md p-4 gap-4">
-              <img src="img/athirah.png" alt="High School Logo"
-                class="w-14 h-14 rounded-full object-cover flex-shrink-0">
-              <div>
-                <div class="font-semibold text-base">SMA Islam Athirah 1 Makassar</div>
-                <div class="flex items-center text-gray-500 text-sm gap-2">
-                  <span>Makassar</span>
-                  <span class="text-xs">•</span>
-                  <span>2021 - 2024</span>
-                </div>
-                <div class="text-xs text-gray-500 mt-1">~ 3 Years</div>
-                <div class="text-gray-600 text-sm">Science Track</div>
-              </div>
-            </div>
-            <!-- Middle School -->
-            <div
-              class="flex items-center rounded-xl border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md p-4 gap-4">
-              <img src="img/athirah.png" alt="Middle School Logo"
-                class="w-14 h-14 rounded-full object-cover flex-shrink-0">
-              <div>
-                <div class="font-semibold text-base">SMP Islam Athirah 1 Makassar</div>
-                <div class="flex items-center text-gray-500 text-sm gap-2">
-                  <span>Makassar</span>
-                  <span class="text-xs">•</span>
-                  <span>2018 - 2021</span>
-                </div>
-                <div class="text-xs text-gray-500 mt-1">~ 3 Years</div>
-                <div class="text-gray-600 text-sm">General Education</div>
-              </div>
-            </div>
-            <!-- Elementary School -->
-            <div
-              class="flex items-center rounded-xl border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md p-4 gap-4">
-              <img src="img/athirah.png" alt="Elementary School Logo"
-                class="w-14 h-14 rounded-full object-cover flex-shrink-0">
-              <div>
-                <div class="font-semibold text-base">SD Islam Athirah 1 Makassar</div>
-                <div class="flex items-center text-gray-500 text-sm gap-2">
-                  <span>Makassar</span>
-                  <span class="text-xs">•</span>
-                  <span>2012 - 2018</span>
-                </div>
-                <div class="text-xs text-gray-500 mt-1">~ 6 Years</div>
-                <div class="text-gray-600 text-sm">Primary Education</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr class="border-t border-neutral-300 my-6">
-        <!-- Committee Experience Section -->
-        <div class="mb-6">
-          <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i class="fa-solid fa-users"></i> Committee
-            Experience</h3>
-          <div class="flex flex-col gap-4">
-            <!-- Experience 1 -->
-            <div
-              class="flex items-center rounded-xl border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md p-4 gap-4">
-              <img src="img/atlantis.jpeg" alt="Tech Festival Organizer Logo"
-                class="w-12 h-12 md:w-14 md:h-14 rounded-lg object-cover flex-shrink-0 bg-gray-100">
-              <div>
-                <div class="font-semibold text-base">Atlantis Festival Experience</div>
-                <div class="flex items-center text-gray-500 text-sm gap-2">
-                  <span>Parkit Lot, Phinisi Point</span>
-                  <span class="text-xs">•</span>
-                  <span>Makassar</span>
-                </div>
-                <div class="text-xs text-gray-500 mt-1">Mar 2023 - Apr 2024</div>
-                <div class="text-gray-600 text-sm">I'm part of the inventory committee, which is a really fun group. We
-                  make sure that everything is ready for the event, including the stage, the artists, and any emergency
-                  equipment.</div>
-              </div>
-            </div>
-            <!-- Experience 2 -->
-            <div
-              class="flex items-center rounded-xl border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md p-4 gap-4">
-              <img src="img/nplc.png" alt="Student Association Logo"
-                class="w-12 h-12 md:w-14 md:h-14 rounded-lg object-cover flex-shrink-0 bg-gray-100">
-              <div>
-                <div class="font-semibold text-base">NPLC 12th</div>
-                <div class="flex items-center text-gray-500 text-sm gap-2">
-                  <span>Informatics Department</span>
-                  <span class="text-xs">•</span>
-                  <span>Makassar</span>
-                </div>
-                <div class="text-xs text-gray-500 mt-1">Nov 2024 - Jan 2025</div>
-                <div class="text-gray-600 text-sm">My job as Liaison Officer is to make sure the rules of the NPLC Rally
-                  Games (Category 2) posts are clear and easy to understand.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr class="border-t border-neutral-300 my-6">
-        <!-- Technical Skills Section -->
-        <div class="mb-6">
-          <h3 class="text-lg font-semibold mb-2 flex items-center gap-2"><i class="fa-solid fa-code"></i> Skills</h3>
-          <p class="text-gray-600 text-base mb-3">My Current Learnings</p>
-          <div class="flex flex-wrap gap-2 mb-2">
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"><i
-                class="fa-brands fa-html5 text-orange-500"></i>HTML</span>
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"><i
-                class="fa-brands fa-css3-alt text-blue-500"></i>CSS</span>
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"><i
-                class="fa-brands fa-js text-yellow-400"></i>JavaScript</span>
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"><i
-                class="fa-brands fa-java text-red-700"></i>Java</span>
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"><i
-                class="fa-brands fa-python text-blue-400"></i>Python</span>
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"><i
-                class="fa-solid fa-wind text-cyan-500"></i>TailwindCSS</span>
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"><i
-                class="fa-brands fa-bootstrap text-purple-600"></i>Bootstrap</span>
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"><i
-                class="fa-brands fa-git-alt text-orange-600"></i>Git</span>
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"><i
-                class="fa-brands fa-github text-gray-800"></i>GitHub</span>
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"><i
-                class="fa-brands fa-vuejs text-green-600"></i>VS Code</span>
-            <span class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"><i
-                class="fa-brands fa-figma text-pink-500"></i>Figma</span>
-          </div>
-        </div>
-        <hr class="border-t border-neutral-300 my-6">
-        <!-- Contact CTA -->
-        <div class="mt-6 text-center">
-          <p class="text-gray-700 mb-4 text-base">
-            Feel free to reach out if you'd like to connect or collaborate!
-          </p>
-          <a href="contact.html"
-            class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-6 rounded-lg transition duration-150 text-sm">
-            <i class="fa-regular fa-envelope"></i> Get in Touch
-          </a>
-        </div>
-      </div>
-    </main>
-  </div>
-  <script src="script.js"></script>
-</body>
+    <div class="flex min-h-screen">
+      <!-- Sidebar Overlay (Mobile) -->
+      <div
+        id="sidebarOverlay"
+        class="fixed inset-0 z-20 sidebar-overlay hidden md:hidden"
+      ></div>
+      <!-- Sidebar: Dekstop Selalu Visible, Mobile ya Hamburger Menu -->
+      <aside
+        id="sidebar"
+        class="sidebar-fade sidebar-desktop-active fixed z-40 top-0 left-0 h-full w-72 bg-white shadow-lg flex flex-col items-center py-8 px-6 min-h-screen border-r border-gray-200 md:w-72 md:translate-x-0 md:opacity-100 md:pointer-events-auto"
+      >
+        <!-- Close Button (only visible on mobile) -->
+        <button
+          id="closeSidebar"
+          class="absolute top-4 right-4 p-2 text-gray-500 hover:text-gray-700 md:hidden"
+        >
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
 
+        <img
+          src="img/1737690544838.jpeg"
+          alt="Profile"
+          class="w-24 h-24 rounded-full object-cover mb-6 border-4 border-white shadow-md"
+        />
+        <div class="flex flex-col items-start w-full mb-6">
+          <div class="flex items-center gap-2 mb-1 pl-4">
+            <h1 class="text-lg font-bold flex items-center">
+              Rifky Paranrengi
+              <span
+                class="text-blue-500 ml-1"
+                style="
+                  font-size: 1rem;
+                  line-height: 1;
+                  position: relative;
+                  top: 2px;
+                "
+                ><i class="fa-solid fa-circle-check"></i
+              ></span>
+            </h1>
+          </div>
+          <span class="text-gray-500 text-sm mb-3 pl-4">@rifkyp</span>
+          <button
+            class="flex items-center gap-2 px-4 py-1 bg-green-50 text-green-700 rounded-full border border-green-200 text-sm font-medium hover:bg-green-100 transition mb-2 ml-4"
+          >
+            <span
+              class="w-2 h-2 bg-green-500 rounded-full inline-block animate-pulse-dot"
+            ></span>
+            Hire me.
+          </button>
+          <div class="flex items-center gap-1 ml-4">
+            <span
+              class="px-2 py-0.5 bg-gray-200 text-xs font-semibold rounded text-gray-700 align-middle"
+              >Unpaid Intern</span
+            >
+          </div>
+        </div>
+        <hr class="w-full border-gray-200 mb-4" />
+        <nav class="flex flex-col gap-1 w-full mb-4">
+          <a
+            href="index.html"
+            class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"
+            ><i class="fa-solid fa-house"></i> Home</a
+          >
+          <a
+            href="about.html"
+            class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-900 bg-gray-100 text-sm"
+            ><i class="fa-regular fa-user"></i> About</a
+          >
+          <a
+            href="projects.html"
+            class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"
+            ><i class="fa-regular fa-folder-open"></i> Projects</a
+          >
+          <a
+            href="contact.html"
+            class="flex items-center gap-3 py-2 px-4 rounded-lg font-medium text-gray-700 hover:bg-gray-100 text-sm"
+            ><i class="fa-regular fa-envelope"></i> Contact</a
+          >
+        </nav>
+        <hr class="w-full border-gray-200 mt-2 mb-4" />
+        <div class="text-center text-xs text-gray-400 mt-auto">
+          COPYRIGHT © 2025<br />
+          Rifky Paranrengi. All rights reserved.
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="flex-1 p-4 md:p-6 pt-20 md:pt-6 md:ml-72">
+        <div class="max-w-3xl mx-auto">
+          <div class="mb-6">
+            <h2 class="text-2xl font-semibold mb-2">About</h2>
+            <p class="text-gray-600 mb-2 text-base">A short story of me</p>
+          </div>
+          <hr class="border-t border-neutral-300 my-6" />
+          <div class="mb-6">
+            <p class="text-gray-700 text-base leading-relaxed mb-2">
+              Hello! I'm Rifky Paranrengi, a passionate second-semester student
+              at Ciputra Surabaya University, studying Informatics. I'm
+              enthusiastic about technology and software development, with a
+              growing focus on both frontend and backend technologies.
+            </p>
+            <p class="text-gray-700 text-base leading-relaxed mb-2">
+              My journey in programming began recently, but I've already
+              developed a strong interest in building meaningful applications
+              that solve real-world problems. I believe in learning by doing,
+              which is why I'm constantly working on personal projects to
+              improve my skills.
+            </p>
+          </div>
+          <hr class="border-t border-neutral-300 my-6" />
+          <!-- Education Section -->
+          <div class="mb-6">
+            <h3 class="text-lg font-semibold mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-graduation-cap"></i> Education
+            </h3>
+            <div class="flex flex-col gap-4">
+              <!-- University -->
+              <div
+                class="flex items-center rounded-xl border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md p-4 gap-4"
+              >
+                <img
+                  src="img/ciputra.png"
+                  alt="University Logo"
+                  class="w-14 h-14 rounded-full object-cover flex-shrink-0"
+                />
+                <div>
+                  <div class="font-semibold text-base">
+                    Ciputra Surabaya University
+                  </div>
+                  <div class="flex items-center text-gray-500 text-sm gap-2">
+                    <span>Surabaya</span>
+                    <span class="text-xs">•</span>
+                    <span>2024 - Present</span>
+                  </div>
+                  <div class="text-xs text-gray-500 mt-1">~ Current</div>
+                  <div class="text-gray-600 text-sm">
+                    Undergraduate, Informatics
+                  </div>
+                </div>
+              </div>
+              <!-- High School -->
+              <div
+                class="flex items-center rounded-xl border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md p-4 gap-4"
+              >
+                <img
+                  src="img/athirah.png"
+                  alt="High School Logo"
+                  class="w-14 h-14 rounded-full object-cover flex-shrink-0"
+                />
+                <div>
+                  <div class="font-semibold text-base">
+                    SMA Islam Athirah 1 Makassar
+                  </div>
+                  <div class="flex items-center text-gray-500 text-sm gap-2">
+                    <span>Makassar</span>
+                    <span class="text-xs">•</span>
+                    <span>2021 - 2024</span>
+                  </div>
+                  <div class="text-xs text-gray-500 mt-1">~ 3 Years</div>
+                  <div class="text-gray-600 text-sm">Science Track</div>
+                </div>
+              </div>
+              <!-- Middle School -->
+              <div
+                class="flex items-center rounded-xl border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md p-4 gap-4"
+              >
+                <img
+                  src="img/athirah.png"
+                  alt="Middle School Logo"
+                  class="w-14 h-14 rounded-full object-cover flex-shrink-0"
+                />
+                <div>
+                  <div class="font-semibold text-base">
+                    SMP Islam Athirah 1 Makassar
+                  </div>
+                  <div class="flex items-center text-gray-500 text-sm gap-2">
+                    <span>Makassar</span>
+                    <span class="text-xs">•</span>
+                    <span>2018 - 2021</span>
+                  </div>
+                  <div class="text-xs text-gray-500 mt-1">~ 3 Years</div>
+                  <div class="text-gray-600 text-sm">General Education</div>
+                </div>
+              </div>
+              <!-- Elementary School -->
+              <div
+                class="flex items-center rounded-xl border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md p-4 gap-4"
+              >
+                <img
+                  src="img/athirah.png"
+                  alt="Elementary School Logo"
+                  class="w-14 h-14 rounded-full object-cover flex-shrink-0"
+                />
+                <div>
+                  <div class="font-semibold text-base">
+                    SD Islam Athirah 1 Makassar
+                  </div>
+                  <div class="flex items-center text-gray-500 text-sm gap-2">
+                    <span>Makassar</span>
+                    <span class="text-xs">•</span>
+                    <span>2012 - 2018</span>
+                  </div>
+                  <div class="text-xs text-gray-500 mt-1">~ 6 Years</div>
+                  <div class="text-gray-600 text-sm">Primary Education</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="border-t border-neutral-300 my-6" />
+          <!-- Committee Experience Section -->
+          <div class="mb-6">
+            <h3 class="text-lg font-semibold mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-users"></i> Committee Experience
+            </h3>
+            <div class="flex flex-col gap-4">
+              <!-- Experience 1 -->
+              <div
+                class="flex items-center rounded-xl border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md p-4 gap-4"
+              >
+                <img
+                  src="img/atlantis.jpeg"
+                  alt="Tech Festival Organizer Logo"
+                  class="w-12 h-12 md:w-14 md:h-14 rounded-lg object-cover flex-shrink-0 bg-gray-100"
+                />
+                <div>
+                  <div class="font-semibold text-base">
+                    Atlantis Festival Experience
+                  </div>
+                  <div class="flex items-center text-gray-500 text-sm gap-2">
+                    <span>Parkit Lot, Phinisi Point</span>
+                    <span class="text-xs">•</span>
+                    <span>Makassar</span>
+                  </div>
+                  <div class="text-xs text-gray-500 mt-1">
+                    Mar 2023 - Apr 2024
+                  </div>
+                  <div class="text-gray-600 text-sm">
+                    I'm part of the inventory committee, which is a really fun
+                    group. We make sure that everything is ready for the event,
+                    including the stage, the artists, and any emergency
+                    equipment.
+                  </div>
+                </div>
+              </div>
+              <!-- Experience 2 -->
+              <div
+                class="flex items-center rounded-xl border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md p-4 gap-4"
+              >
+                <img
+                  src="img/nplc.png"
+                  alt="Student Association Logo"
+                  class="w-12 h-12 md:w-14 md:h-14 rounded-lg object-cover flex-shrink-0 bg-gray-100"
+                />
+                <div>
+                  <div class="font-semibold text-base">NPLC 12th</div>
+                  <div class="flex items-center text-gray-500 text-sm gap-2">
+                    <span>Informatics Department</span>
+                    <span class="text-xs">•</span>
+                    <span>Makassar</span>
+                  </div>
+                  <div class="text-xs text-gray-500 mt-1">
+                    Nov 2024 - Jan 2025
+                  </div>
+                  <div class="text-gray-600 text-sm">
+                    My job as Liaison Officer is to make sure the rules of the
+                    NPLC Rally Games (Category 2) posts are clear and easy to
+                    understand.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="border-t border-neutral-300 my-6" />
+          <!-- Technical Skills Section -->
+          <div class="mb-6">
+            <h3 class="text-lg font-semibold mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-code"></i> Skills
+            </h3>
+            <p class="text-gray-600 text-base mb-3">My Current Learnings</p>
+            <div class="flex flex-wrap gap-2 mb-2">
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"
+                ><i class="fa-brands fa-html5 text-orange-500"></i>HTML</span
+              >
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"
+                ><i class="fa-brands fa-css3-alt text-blue-500"></i>CSS</span
+              >
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"
+                ><i class="fa-brands fa-js text-yellow-400"></i>JavaScript</span
+              >
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"
+                ><i class="fa-brands fa-java text-red-700"></i>Java</span
+              >
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"
+                ><i class="fa-brands fa-python text-blue-400"></i>Python</span
+              >
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"
+                ><i class="fa-solid fa-wind text-cyan-500"></i>TailwindCSS</span
+              >
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"
+                ><i class="fa-brands fa-bootstrap text-purple-600"></i
+                >Bootstrap</span
+              >
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"
+                ><i class="fa-brands fa-git-alt text-orange-600"></i>Git</span
+              >
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"
+                ><i class="fa-brands fa-github text-gray-800"></i>GitHub</span
+              >
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"
+                ><i class="fa-brands fa-vuejs text-green-600"></i>VS Code</span
+              >
+              <span
+                class="flex items-center gap-1.5 bg-gray-100 px-2.5 py-1 rounded-full text-sm"
+                ><i class="fa-brands fa-figma text-pink-500"></i>Figma</span
+              >
+            </div>
+          </div>
+          <hr class="border-t border-neutral-300 my-6" />
+          <!-- Contact CTA -->
+          <div class="mt-6 text-center">
+            <p class="text-gray-700 mb-4 text-base">
+              Feel free to reach out if you'd like to connect or collaborate!
+            </p>
+            <a
+              href="contact.html"
+              class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-6 rounded-lg transition duration-150 text-sm"
+            >
+              <i class="fa-regular fa-envelope"></i> Get in Touch
+            </a>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
