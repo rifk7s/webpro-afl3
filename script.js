@@ -1,5 +1,5 @@
 // Hamburger menu logic (shared for all pages)
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const hamburgerBtn = document.getElementById("hamburgerBtn");
   const sidebar = document.getElementById("sidebar");
   const sidebarOverlay = document.getElementById("sidebarOverlay");
@@ -33,11 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
       if (sidebar) sidebar.classList.add("active");
       if (sidebarOverlay) sidebarOverlay.classList.add("hidden");
       if (mobileHeader) mobileHeader.style.display = "none";
-    } else {
-      if (sidebar) sidebar.classList.remove("active");
-      if (sidebarOverlay) sidebarOverlay.classList.add("hidden");
-      if (mobileHeader) mobileHeader.style.display = "";
+      return;
     }
+    if (sidebar) sidebar.classList.remove("active");
+    if (sidebarOverlay) sidebarOverlay.classList.add("hidden");
+    if (mobileHeader) mobileHeader.style.display = "";
   }
   window.addEventListener("resize", handleResize);
   handleResize();
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Page loader logic
   const loader = document.getElementById("loader");
   if (loader) {
-    window.addEventListener("load", function () {
+    window.addEventListener("load", () => {
       loader.style.display = "none";
     });
   }
@@ -57,7 +57,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to apply theme based on localStorage or system preference
   function applyTheme() {
-    if (localStorage.getItem("theme") === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+    // Default to light mode if no preference
+    const userTheme = localStorage.getItem("theme");
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (userTheme === "dark" || (!userTheme && systemPrefersDark)) {
       document.documentElement.classList.add("dark");
       themeToggleButtons.forEach(button => {
         const icon = button.querySelector("i");
