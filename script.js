@@ -55,36 +55,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const moonIcon = "fa-moon";
   const sunIcon = "fa-sun";
 
+  // Helper to update theme button icon and text
+  function updateThemeButton(button, isDark) {
+    const icon = button.querySelector("i");
+    if (icon) {
+      icon.classList.toggle(moonIcon, !isDark);
+      icon.classList.toggle(sunIcon, isDark);
+    }
+    if (button.id === 'theme-toggle-desktop') {
+      const span = button.querySelector('span');
+      if (span) span.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+    }
+  }
+
   // Function to apply theme based on localStorage or system preference
   function applyTheme() {
-    // Default to light mode if no preference
     const userTheme = localStorage.getItem("theme");
     const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    if (userTheme === "dark" || (!userTheme && systemPrefersDark)) {
-      document.documentElement.classList.add("dark");
-      themeToggleButtons.forEach(button => {
-        const icon = button.querySelector("i");
-        if (icon) {
-          icon.classList.remove(moonIcon);
-          icon.classList.add(sunIcon);
-        }
-        if (button.id === 'theme-toggle-desktop') {
-          button.querySelector('span').textContent = 'Light Mode';
-        }
-      });
-    } else {
-      document.documentElement.classList.remove("dark");
-      themeToggleButtons.forEach(button => {
-        const icon = button.querySelector("i");
-        if (icon) {
-          icon.classList.remove(sunIcon);
-          icon.classList.add(moonIcon);
-        }
-        if (button.id === 'theme-toggle-desktop') {
-          button.querySelector('span').textContent = 'Dark Mode';
-        }
-      });
-    }
+    const isDark = userTheme === "dark" || (!userTheme && systemPrefersDark);
+    document.documentElement.classList.toggle("dark", isDark);
+    themeToggleButtons.forEach(button => updateThemeButton(button, isDark));
   }
 
   // Function to toggle theme
