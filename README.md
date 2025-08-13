@@ -194,11 +194,6 @@ We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md)
 
 This project is personal portfolio software. Feel free to use it as inspiration for your own portfolio, but please don't use the personal content directly.
 
-## 🔗 Links
-
-- **Original HTML Version**: [Main Branch](https://github.com/rifk7s/webpro-afl3/tree/main)
-- **Developer**: [Rifky Paranrengi (@rifk7s)](https://github.com/rifk7s)
-
 ---
 
 <p align="center">
