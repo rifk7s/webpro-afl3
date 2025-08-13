@@ -91,7 +91,7 @@ webpro-afl3-nextjs/
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/rifk7s/webpro-afl3.git
-   cd webpro-afl3/webpro-afl3-nextjs
+   cd webpro-afl3/webpro-afl3
    ```
 
 2. **Install dependencies:**
@@ -196,9 +196,7 @@ This project is personal portfolio software. Feel free to use it as inspiration 
 
 ## 🔗 Links
 
-- **Live Site**: [Portfolio Website](https://rifk7s.github.io/webpro-afl3/) (main branch)
 - **Original HTML Version**: [Main Branch](https://github.com/rifk7s/webpro-afl3/tree/main)
-- **Next.js Version**: [Migrate Branch](https://github.com/rifk7s/webpro-afl3/tree/migrate/nextjs) (development)
 - **Developer**: [Rifky Paranrengi (@rifk7s)](https://github.com/rifk7s)
 
 ---
