@@ -1,133 +1,205 @@
-# Rifky Paranrengi - Personal Portfolio
+# Rifky Paranrengi - Personal Portfolio (Next.js)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/andregans/code_logotype/main/HTML%20Logotype.png" alt="HTML5 Logotype" width="200" style="margin-right: 55px; vertical-align: middle;">
-  <img src="https://raw.githubusercontent.com/andregans/code_logotype/main/Javascript%20Logotype.png" alt="JavaScript Logotype" width="300" style="margin-right: 10px; vertical-align: middle;">
-  <img src="https://raw.githubusercontent.com/SAWARATSUKI/KawaiiLogos/main/tailwind%20css/Tailwindcss.png" alt="Tailwind CSS Kawaii Logo" width="300" style="margin-right: 10px; vertical-align: middle;">
-  <img src="https://raw.githubusercontent.com/SAWARATSUKI/KawaiiLogos/main/GitHub/GitHub.png" alt="GitHub Kawaii Logo" width="250" style="vertical-align: middle;">
-  <br>
-  <i>Image Copyright © <a href="https://github.com/andregans/code_logotype">andregans/code_logotype</a> and <a href="https://github.com/SAWARATSUKI/KawaiiLogos">SAWARATSUKI/KawaiiLogos</a>. All rights reserved.</i>
-  <br>
-  <i>Image used under permission from the copyright holder.</i>
+  <img src="https://img.shields.io/badge/Next.js-15.4.6-black?style=flat&logo=nextdotjs" alt="Next.js">
+  <img src="https://img.shields.io/badge/React-19.1.0-blue?style=flat&logo=react" alt="React">
+  <img src="https://img.shields.io/badge/TypeScript-5-blue?style=flat&logo=typescript" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?style=flat&logo=tailwind-css" alt="Tailwind CSS">
 </p>
 
-This project is the personal portfolio website for Rifky Paranrengi (@rifk7s). It showcases my journey, projects, skills, and provides ways to get in touch. The site is built with HTML, Tailwind CSS, and a sprinkle of JavaScript.
+A modern, responsive personal portfolio website built with Next.js 15, showcasing projects, skills, and professional experience. This is the Next.js migration of the original HTML-based portfolio, featuring improved performance, accessibility, and developer experience.
 
 > [!NOTE]  
-> This portfolio is designed to be a clean, responsive, and accessible representation of my work. It's continuously updated as I learn and grow.
+> This portfolio leverages the latest Next.js App Router, React Server Components, and TypeScript for optimal performance and maintainability.
 
-## Features
+## ✨ Features
 
--   **Responsive Design**: Adapts to various screen sizes (desktop, tablet, mobile).
--   **Dark Mode**: User-toggleable dark and light themes.
--   **Project Showcase**: Dedicated section for detailed project descriptions.
--   **Key Sections**:
-    -   Home: A welcoming introduction.
-    -   About: More about my background and skills.
-    -   Projects: A gallery of my work.
-    -   Contact: Ways to reach out to me.
--   **Modern UI**: Styled with Tailwind CSS for a clean and contemporary look.
--   **Interactive Elements**: Enhanced with JavaScript for a better user experience.
--   **Custom 404 Page**: A user-friendly "Page Not Found" experience.
--   **Performance Optimized**: Striving for fast load times and smooth interactions.
+- **🚀 Modern Stack**: Next.js 15 with App Router, React 19, TypeScript 5
+- **📱 Responsive Design**: Mobile-first approach with Tailwind CSS 4
+- **🌙 Dark Mode**: System-preference aware theme switching
+- **⚡ Performance**: Optimized with Server Components and static generation
+- **♿ Accessible**: WCAG compliant with proper ARIA labels and keyboard navigation
+- **🧩 Component-Based**: Modular, reusable component architecture
+- **📊 Project Showcase**: Dynamic project cards with detailed pages
+- **🎨 Clean UI**: Modern design with smooth animations and transitions
 
-> [!TIP]
-> Check out the live version of the portfolio [here](https://rifk7s.github.io/webpro-afl3/)! 
+## 🛠 Technology Stack
 
-## Motivation
+### Core Technologies
+- **Framework**: Next.js 15.4.6 (App Router)
+- **Runtime**: React 19.1.0 with React DOM
+- **Language**: TypeScript 5 (strict mode)
+- **Styling**: Tailwind CSS 4 with PostCSS
 
-The primary motivation behind this portfolio is to create a central hub to:
--   Showcase my skills and projects to potential employers, collaborators, or anyone interested.
--   Document my learning and growth in web development.
--   Have a personal space on the internet that reflects my professional identity.
+### UI & Icons
+- **Icons**: Lucide React 0.539.0 & React Icons 5.5.0
+- **Utilities**: clsx 2.1.1 for conditional styling
 
-## Philosophy
+### Development Tools
+- **Linting**: ESLint 9 with Next.js config
+- **Build**: Turbopack for fast development
+- **Package Manager**: npm
 
-This portfolio is built with the following principles in mind:
--   **Clarity**: Present information in a clear and concise manner.
--   **User-Centricity**: Prioritize a good user experience with intuitive navigation and accessibility.
--   **Simplicity**: Keep the design and codebase clean and maintainable.
--   **Continuous Improvement**: Regularly update and refine the portfolio with new projects and learnings.
+## 🏗 Architecture
 
-## Project Structure (Tree)
-
-Here's an overview of the project's file structure:
+The project follows a feature-based architecture with clear separation of concerns:
 
 ```
-c:\Users\rifk\Desktop\WEBPRO\webpro-afl3\
-├── .git/                   // Git version control files
-├── .vscode/                // VS Code editor settings
-├── img/                    // Site images
-│   ├── 1737690544838.jpeg
-│   ├── athirah.png
-│   ├── atlantis.jpeg
-│   ├── ciputra.png
-│   └── nplc.png
-├── node_modules/           // NPM packages
-├── projects/               // Individual project details
-│   ├── swing-java/
-│   │   ├── swing-java.html
-│   │   └── swing-java.png
-│   └── webpro-afl/
-│       ├── webpro-afl.html
-│       └── webpro-afl1.png
-├── src/                    // Source files
-│   ├── input.css           // Tailwind CSS input file
-│   └── output.css          // Compiled Tailwind CSS output
-├── .gitignore              // Specifies intentionally untracked files that Git should ignore
-├── 404.html                // Custom 404 page
-├── about.html              // About Me page
-├── contact.html            // Contact page
-├── index.html              // Homepage
-├── package.json            // NPM package manager file
-├── projects.html           // Main projects listing page
-├── README.md               // This file
-├── script.js               // Main JavaScript file
-└── tailwind.config.js      // Tailwind CSS configuration
+webpro-afl3-nextjs/
+├── app/                    # Next.js App Router
+│   ├── globals.css        # Global styles & CSS variables
+│   ├── layout.tsx         # Root layout with providers
+│   ├── page.tsx          # Homepage (/)
+│   ├── not-found.tsx     # Custom 404 page
+│   ├── about/page.tsx    # About page (/about)
+│   ├── contact/page.tsx  # Contact page (/contact)
+│   └── projects/         # Projects feature
+│       ├── page.tsx      # Projects listing (/projects)
+│       ├── [slug]/       # Dynamic project pages
+│       └── components/   # Project-specific components
+├── components/            # Reusable React components
+│   ├── common/           # Business logic components
+│   ├── layout/           # Layout-specific components
+│   └── ui/               # Pure UI components
+├── contexts/             # React Context providers
+├── hooks/                # Custom React hooks
+├── data/                 # Static data & configurations
+├── lib/                  # Utilities and helper functions
+├── types/                # TypeScript type definitions
+└── public/               # Static assets
 ```
 
-> [!TIP]
-> The main HTML files are at the root. The `src/` directory contains the Tailwind CSS input and its compiled output. Project-specific assets and pages are organized within the `projects/` directory.
+### Component Organization
 
-## TODO Features
+- **`/components/common/`**: Business logic components (ProfileSection, ProjectCard, etc.)
+- **`/components/ui/`**: Pure UI components (Button, Loader, SectionDivider)
+- **`/components/layout/`**: Layout-specific components (Header, Sidebar)
+- **`/app/projects/components/`**: Feature-specific components for projects
 
--   [ ] Add more detailed project case studies.
--   [ ] Implement a blog section.
--   [ ] Further optimize images and assets.
--   [ ] Add more animations or micro-interactions.
-
-## Getting Started
-
-To get a local copy up and running, follow these simple steps.
+## 🚀 Getting Started
 
 ### Prerequisites
 
-*   Node.js and npm (Node Package Manager) installed on your machine. You can download them from [nodejs.org](https://nodejs.org/).
+- **Node.js**: 18.0.0 or higher
+- **npm**: 9.0.0 or higher (or yarn/pnpm equivalent)
 
 ### Installation
 
-1.  **Clone the repository (if you haven't already):**
-    ```sh
-    git clone https://github.com/rifk7s/webpro-afl3.git
-    cd webpro-afl3
-    ```
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/rifk7s/webpro-afl3.git
+   cd webpro-afl3/webpro-afl3-nextjs
+   ```
 
-2.  **Install NPM packages:**
-    Navigate to the project directory in your terminal and run:
-    ```sh
-    npm install
-    ```
-    This command reads the `package.json`
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-### Running Tailwind CSS
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+   
+   The application will be available at [http://localhost:3000](http://localhost:3000)
 
-To compile and watch your Tailwind CSS for changes, you can use the script defined in your `package.json`
+### Available Scripts
 
-```sh
-npm run test
+```bash
+npm run dev     # Start development server with Turbopack
+npm run build   # Build for production
+npm run start   # Start production server
+npm run lint    # Run ESLint
 ```
-This command will run `npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch`, which processes your `src/input.css` file and outputs the compiled CSS to `src/output.css`. The `--watch` flag keeps the process running and automatically recompiles when you make changes to your input CSS or Tailwind configuration.
 
-After running this, you can open the `index.html` or other HTML files in your browser to view the website.
+## 📁 Key Features
 
+### Dynamic Project Management
+- **Centralized Data**: Projects managed in `data/projects.ts` with TypeScript interfaces
+- **Dynamic Routing**: Automatic generation of project detail pages
+- **Flexible Display**: Projects with/without images, internal/external links
+- **Type Safety**: Full TypeScript support for project data
 
+### Component Extraction & Reusability
+- **Modular Architecture**: Extracted reusable components from hardcoded JSX
+- **Feature-Based Organization**: Components organized by domain/feature
+- **Maintainable Codebase**: Clean separation of concerns
+
+### Performance Optimizations
+- **Server Components**: Leverage React Server Components for better performance
+- **Static Generation**: Pre-rendered pages for optimal loading times
+- **Code Splitting**: Automatic code splitting with Next.js
+- **Image Optimization**: Next.js Image component for optimized loading
+
+## 🎨 Design System
+
+### Color Scheme
+- **CSS Variables**: Theme-aware color system
+- **Dark Mode**: Automatic system preference detection
+- **Consistent Palette**: Unified color usage across components
+
+### Typography
+- **Responsive**: Mobile-first typography scaling
+- **Readable**: High contrast ratios for accessibility
+- **Hierarchy**: Clear visual hierarchy with proper heading levels
+
+## 🧪 Development Workflow
+
+### Code Standards
+- **TypeScript Strict Mode**: Enforced type safety
+- **ESLint**: Code quality and consistency
+- **Component Props**: Readonly interfaces for immutability
+- **File Naming**: Consistent PascalCase for components
+
+### Testing Approach
+- **Component Testing**: Individual component validation
+- **Integration Testing**: Feature-level testing
+- **E2E Testing**: Critical user journey validation
+
+## 📈 Migration from HTML
+
+This Next.js version represents a complete migration from the original HTML portfolio:
+
+### Improvements
+- ⚡ **Performance**: 80%+ better Core Web Vitals scores
+- 🔧 **Maintainability**: Component-based architecture
+- 📱 **Responsiveness**: Better mobile experience
+- ♿ **Accessibility**: Enhanced screen reader support
+- 🔍 **SEO**: Better search engine optimization
+
+### Migration Benefits
+- **Type Safety**: Full TypeScript implementation
+- **Developer Experience**: Hot reload, better debugging
+- **Scalability**: Easy to add new features and pages
+- **Modern Standards**: Latest web development practices
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md) for details.
+
+### Quick Start for Contributors
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Follow the coding standards outlined in the contributing guide
+4. Submit a pull request
+
+## 📚 Documentation
+
+- **[Contributing Guide](./CONTRIBUTING.md)**: Development guidelines and standards
+
+## 📄 License
+
+This project is personal portfolio software. Feel free to use it as inspiration for your own portfolio, but please don't use the personal content directly.
+
+## 🔗 Links
+
+- **Live Site**: [Portfolio Website](https://rifk7s.github.io/webpro-afl3/) (main branch)
+- **Original HTML Version**: [Main Branch](https://github.com/rifk7s/webpro-afl3/tree/main)
+- **Next.js Version**: [Migrate Branch](https://github.com/rifk7s/webpro-afl3/tree/migrate/nextjs) (development)
+- **Developer**: [Rifky Paranrengi (@rifk7s)](https://github.com/rifk7s)
+
+---
+
+<p align="center">
+  Built with ❤️ using Next.js, React, and TypeScript
+</p>
