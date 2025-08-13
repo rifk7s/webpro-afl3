@@ -91,7 +91,7 @@ webpro-afl3-nextjs/
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/rifk7s/webpro-afl3.git
-   cd webpro-afl3/webpro-afl3
+   cd webpro-afl3
    ```
 
 2. **Install dependencies:**
