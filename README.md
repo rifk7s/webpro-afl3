@@ -9,6 +9,9 @@
 
 A modern, responsive personal portfolio website built with Next.js 15, showcasing projects, skills, and professional experience. This is the Next.js migration of the original HTML-based portfolio, featuring improved performance, accessibility, and developer experience.
 
+> [!TIP]  
+> **Want to visit the old project?** [Click here to view the original HTML version](https://github.com/rifk7s/webpro-afl3/tree/old/html) 📂
+
 > [!NOTE]  
 > This portfolio leverages the latest Next.js App Router, React Server Components, and TypeScript for optimal performance and maintainability.
 
