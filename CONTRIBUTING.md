@@ -14,7 +14,7 @@ Thank you for your interest in contributing to webpro-afl3! This document provid
 2. Clone your fork:
    ```bash
    git clone https://github.com/your-username/webpro-afl3.git
-   cd webpro-afl3/webpro-afl3-nextjs
+   cd webpro-afl3
    ```
 3. Install dependencies:
    ```bash
