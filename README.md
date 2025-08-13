@@ -1,6 +1,6 @@
 # Rifky Paranrengi - Personal Portfolio
 > [!IMPORTANT]  
-> **Next.js Version Available**: A modern Next.js version with enhanced features is available on the [nextjs branch](https://github.com/rifk7s/webpro-afl3/tree/nextjs-update). Check it out for improved performance and developer experience!
+> **Next.js Version Available**: A modern Next.js version with enhanced features is available on the [nextjs branch](https://github.com/rifk7s/webpro-afl3/tree/main). Check it out for improved performance and developer experience!
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/andregans/code_logotype/main/HTML%20Logotype.png" alt="HTML5 Logotype" width="200" style="margin-right: 55px; vertical-align: middle;">
