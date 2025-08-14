@@ -52,7 +52,7 @@ function CardContent({
       {image && (
         <Image
           src={image}
-          alt={imageAlt || `${title} project screenshot`}
+          alt={imageAlt ?? `${title} project screenshot`}
           width={400}
           height={192}
           className="w-full h-48 object-cover object-top border-b"
