@@ -5,14 +5,14 @@ import { ThemeContextType } from '@/types';
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
+export function ThemeProvider({ children }: Readonly<{ children: React.ReactNode }>) {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
   useEffect(() => {
     // Check for saved theme in localStorage or system preference
     const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
     const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    const initialTheme = savedTheme || systemTheme;
+    const initialTheme = savedTheme ?? systemTheme;
     
     setTheme(initialTheme);
     updateDocumentTheme(initialTheme);
