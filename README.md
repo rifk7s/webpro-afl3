@@ -1,6 +1,12 @@
 # Rifky Paranrengi - Personal Portfolio (Next.js)
 
 <p align="center">
+  <a href="https://old.rifky.dev" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Live%20Demo-https%3A%2F%2Fold.rifky.dev-brightgreen?style=flat" alt="Live Demo">
+  </a>
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/Next.js-15.4.6-black?style=flat&logo=nextdotjs" alt="Next.js">
   <img src="https://img.shields.io/badge/React-19.1.0-blue?style=flat&logo=react" alt="React">
   <img src="https://img.shields.io/badge/TypeScript-5-blue?style=flat&logo=typescript" alt="TypeScript">
@@ -10,7 +16,8 @@
 A modern, responsive personal portfolio website built with Next.js 15, showcasing projects, skills, and professional experience. This is the Next.js migration of the original HTML-based portfolio, featuring improved performance, accessibility, and developer experience.
 
 > [!TIP]  
-> **Want to visit the old project?** [Click here to view the original HTML version](https://github.com/rifk7s/webpro-afl3/tree/old/html) 📂
+> Looking for the original HTML project?  
+> • Code: [Original HTML version (branch)](https://github.com/rifk7s/webpro-afl3/tree/old/html) 📂
 
 > [!NOTE]  
 > This portfolio leverages the latest Next.js App Router, React Server Components, and TypeScript for optimal performance and maintainability.
